@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: mmp_production
-  username: mmp
-  password: <%= ENV['MMP_DATABASE_PASSWORD'] %>
+  database: <%= Figaro.env.db %>
+  username: <%= Figaro.env.usr %>
+  password: <%= Figaro.env.pwd %>
+  host: localhost
+  port: 5432

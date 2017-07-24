@@ -80,8 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: <%= Figaro.env.db %>
-  username: <%= Figaro.env.usr %>
-  password: <%= Figaro.env.pwd %>
+  database: mmp_colmex
+  username: postgres
+  password: postgres
   host: localhost
   port: 5432
