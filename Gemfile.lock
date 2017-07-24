@@ -121,7 +121,6 @@ GEM
     mini_portile2 (2.2.0)
     minitest (5.10.3)
     multi_json (1.12.1)
-    mysql2 (0.4.4)
     net-ldap (0.15.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -135,6 +134,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.21.0)
     rack (1.6.8)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -237,8 +237,8 @@ DEPENDENCIES
   gon
   jbuilder (~> 2.0)
   jquery-rails
-  mysql2 (>= 0.3.13, < 0.5)
   paperclip
+  pg
   rails (= 4.2.6)
   remotipart (~> 1.2)
   sass-rails (~> 5.0)
