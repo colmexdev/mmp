@@ -92,7 +92,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit raw('Ingresar <i class="fa fa-arrow-circle-o-right"></i>'), :class => "btn btn-main btn-lg", :data-loading-text => raw("<i class='fa fa-spinner fa-spin'></i> Ingresando...") %>
+    <%= f.submit raw('Ingresar <i class="fa fa-arrow-circle-o-right"></i>'), :class => "btn btn-main btn-lg", :'data-loading-text' => raw("<i class='fa fa-spinner fa-spin'></i> Ingresando...") %>
   </div>
 <% end %>
 
