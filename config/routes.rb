@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, :skip => [:sessions] do
-    get '/'   => "devise/sessions#new",       :as => :new_user_session
-    post '/'  => 'devise/sessions#create',    :as => :user_session
-    delete '/salir'  => 'devise/sessions#destroy',   :as => :destroy_user_session
-    get "/registro"   => "devise/registrations#new",   :as => :new_user_registration
-  end
+  devise_for :users, :path => '', :path_names =>
+  {:sign_in => '', :sign_out => 'salir'}
 
   get 'algo' => 'inicio#inicio', :as => :prueba
 
