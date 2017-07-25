@@ -88,7 +88,7 @@
 
   <div class="field">
 
-    <%= f.password_field :password, autocomplete: "off", placehoder: "Contraseña", class: "form-control" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña", class: "form-control" %>
   </div>
 
   <div class="actions">
