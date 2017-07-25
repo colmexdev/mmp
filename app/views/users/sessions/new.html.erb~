@@ -83,7 +83,7 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
 
-    <%= f.field :usuario, autofocus: true, placeholder: "Usuario", class: "form-control" %>
+    <%= f.text_field :usuario, autofocus: true, placeholder: "Usuario", class: "form-control" %>
   </div>
 
   <div class="field">
