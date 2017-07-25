@@ -3,4 +3,20 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  protected
+  def after_sign_in_path_for(resource)
+    if resource_name == "user"
+    	prueba_path
+    end
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    if resource_or_scope_name == "user"
+      root_path
+    end
+  end
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:usuario, :password, :password_confirmation])
+  end
 end

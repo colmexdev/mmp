@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => {:sessions => 'users/sessions'}, :skip => [:sessions] do
-    get '/'   => "devise/sessions#new",       :as => :new_user_session
-    post '/signin'  => 'devise/sessions#create',    :as => :user_session
-    get '/salir'  => 'devise/sessions#destroy',   :as => :destroy_user_session
+    get '/'   => "users/sessions#new",       :as => :new_user_session
+    post '/signin'  => 'users/sessions#create',    :as => :user_session
+    get '/salir'  => 'users/sessions#destroy',   :as => :destroy_user_session
     get "/registro"   => "users/registrations#new",   :as => :new_user_registration
   end
 
