@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users do
+    get '/'   => "devise/sessions#new",       :as => :new_user_session
+    post '/signin'  => 'devise/sessions#create',    :as => :user_session
+    get '/salir'  => 'devise/sessions#destroy',   :as => :destroy_user_session
+    get "/registro"   => "users/registrations#new",   :as => :new_user_registration
+  end
+
   get 'inicio' => 'inicio#inicio', :as => :main
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -7,7 +13,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   devise_scope :user do
-    root 'devise/sessions#new'
+    root to: 'devise/sessions#new'
   end
 
   # Example of regular route:

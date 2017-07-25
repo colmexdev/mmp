@@ -1,5 +1,3 @@
-<body data-spy="scroll" data-target=".main-nav">
-
 <%= render 'inicio/header' %>
 <!-- Inicia banner -->
 <section class="home" data-stellar-background-ratio="0.4">
@@ -80,12 +78,31 @@
         </div>
         <p><strong>Ingrese la contraseña que le proporcionó el entrevistador:</strong></p>
         <div class="widget contact" style="padding: 0">
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+
+    <%= f.field :usuario, autofocus: true, placeholder: "Usuario", class: "form-control" %>
+  </div>
+
+  <div class="field">
+
+    <%= f.password_field :password, autocomplete: "off", placehoder: "Contraseña", class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<% if false %>
           <form class="contact-form">
             <input type="text" class="form-control" id="fname" name="fname" placeholder="Usuario">
             <input type="email" class="form-control" id="email" name="email" placeholder="Contraseña">
             <br>
             <button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Ingresando...">Ingresar <i class="fa fa-arrow-circle-o-right"></i></button>
           </form>
+<% end %>
           <div id="result-message" role="alert"></div>
         </div>
       </div>
