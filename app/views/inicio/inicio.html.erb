@@ -1,55 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mexican Migration Project</title>
-<link rel="icon" type="image/png" href="images/favicon.png" />
-<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=PT+Sans:400i,700i" rel="stylesheet">
-<!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<!--link href="css/owl.carousel.css" rel="stylesheet">
-<link href="css/owl.theme.css" rel="stylesheet">
-<link href="css/owl.transitions.css" rel="stylesheet"-->
-
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-		<script src="js/html5shiv.min.js"></script>
-		<script src="js/respond.min.js"></script>
-		<![endif]-->
-</head>
 <body data-spy="scroll" data-target=".main-nav">
-<header class="st-navbar"> 
-  <!-- Inicia Navegación -->
-  <nav class="navbar navbar-default navbar-fixed-top clearfix">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#moviles"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a class="navbar-brand" href="index.html"><img src="<%= image_url("logo-mmp.png") %>" alt="" class="img-responsive mmp"></a></div>
-      <!-- Navegación Pantallas chicas-->
-      <div class="collapse oculto" id="moviles">
-        <ul class="nav navbar-nav principal">
-          <li><a href="https://www.colmex.mx/" target="_blank">El Colegio de México</a></li>
-          <li><a href="https://www.princeton.edu/" target="_blank">Princeton University</a> </li>
-        </ul>
-      </div>
-      <!-- Navegación Pantallas grandes-->
-      <div class="collapse navbar-collapse main-nav" id="escritorio">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a class="navbar-brand" href="https://www.colmex.mx/" target="_blank"><img src="<%= image_url("colmex.png") %>" alt="El Colegio de México" class="img-responsive"></a></li>
-          <li><a class="navbar-brand" href="https://www.princeton.edu/" target="_blank"><img src="<%= image_url("princeton.png") %>" alt="Princeton University" class="img-responsive"></a></li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse --> 
-    </div>
-  </nav>
-  <!-- Termina Navegación --> 
-</header>
+
+<%= render 'inicio/header' %>
 <!-- Inicia banner -->
 <section class="home" data-stellar-background-ratio="0.4">
   <div class="container">
@@ -129,12 +80,31 @@
         </div>
         <p><strong>Ingrese la contraseña que le proporcionó el entrevistador:</strong></p>
         <div class="widget contact" style="padding: 0">
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+
+    <%= f.field :usuario, autofocus: true, placeholder: "Usuario", class: "form-control" %>
+  </div>
+
+  <div class="field">
+
+    <%= f.password_field :password, autocomplete: "off", placehoder: "Contraseña", class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<% if false %>
           <form class="contact-form">
             <input type="text" class="form-control" id="fname" name="fname" placeholder="Usuario">
             <input type="email" class="form-control" id="email" name="email" placeholder="Contraseña">
             <br>
             <button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Ingresando...">Ingresar <i class="fa fa-arrow-circle-o-right"></i></button>
           </form>
+<% end %>
           <div id="result-message" role="alert"></div>
         </div>
       </div>
@@ -143,30 +113,6 @@
   </div>
 </section>
 <!-- Inicia pie -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12"> Derechos reservados, El Colegio de México A.C. © 2017<br>
-        Camino al Ajusco número 20, Colonia Pedregal de Santa Teresa, C.P. 10740 México, Ciudad de México<br>
-        Tel.: +52 55 54493000 </div>
-    </div>
-  </div>
-</footer>
+<%= render 'inicio/footer' %>
 <!-- Termina pie --> 
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery.min.js"></script> 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/jquery.stellar.js"></script> 
-<script src="js/jquery.appear.js"></script> 
-<script src="js/jquery.nicescroll.min.js"></script> 
-<script src="js/script.js"></script> 
-<!--script src="js/jquery.easing.min.js"></script> 
-<script src="js/jquery.countTo.js"></script> 
-<script src="js/jquery.shuffle.modernizr.js"></script> 
-<script src="js/jquery.shuffle.js"></script> 
-<script src="js/owl.carousel.js"></script> 
-<script src="js/jquery.ajaxchimp.min.js"></script-->
-</body>
-</html>

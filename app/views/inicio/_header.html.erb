@@ -1,0 +1,26 @@
+<header class="st-navbar"> 
+  <!-- Inicia Navegación -->
+  <nav class="navbar navbar-default navbar-fixed-top clearfix">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#moviles"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="index.html"><img src="<%= image_url("logo-mmp.png") %>" alt="" class="img-responsive mmp"></a></div>
+      <!-- Navegación Pantallas chicas-->
+      <div class="collapse oculto" id="moviles">
+        <ul class="nav navbar-nav principal">
+          <li><a href="https://www.colmex.mx/" target="_blank">El Colegio de México</a></li>
+          <li><a href="https://www.princeton.edu/" target="_blank">Princeton University</a> </li>
+        </ul>
+      </div>
+      <!-- Navegación Pantallas grandes-->
+      <div class="collapse navbar-collapse main-nav" id="escritorio">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="navbar-brand" href="https://www.colmex.mx/" target="_blank"><img src="<%= image_url("colmex.png") %>" alt="El Colegio de México" class="img-responsive"></a></li>
+          <li><a class="navbar-brand" href="https://www.princeton.edu/" target="_blank"><img src="<%= image_url("princeton.png") %>" alt="Princeton University" class="img-responsive"></a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </div>
+  </nav>
+  <!-- Termina Navegación --> 
+</header>
