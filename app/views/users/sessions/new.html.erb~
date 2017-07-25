@@ -92,7 +92,7 @@
   </div>
 
   <div class="actions">
-		<%= button_tag(type: 'submit', name: 'Commit', class: "btn btn-main btn-lg", id: 'validForm', 'data-loading-text': "<i class='fa fa-spinner fa-spin'></i> Ingresando..." ) do %>Ingresar <i class="fa fa-arrow-circle-o-right"></i>
+		<%= button_tag(type: 'submit', name: 'Commit', class: "btn btn-main btn-lg", id: 'send', 'data-loading-text': "<i class='fa fa-spinner fa-spin'></i> Ingresando..." ) do %>Ingresar <i class="fa fa-arrow-circle-o-right"></i>
 		<% end %>
    
   </div>
@@ -103,7 +103,7 @@
             <input type="text" class="form-control" id="fname" name="fname" placeholder="Usuario">
             <input type="email" class="form-control" id="email" name="email" placeholder="Contraseña">
             <br>
-            <button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Ingresando...">Ingresar <i class="fa fa-arrow-circle-o-right"></i></button>
+            <button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Ingresando...">Ingresar <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
           </form>
 <% end %>
           <div id="result-message" role="alert"></div>
