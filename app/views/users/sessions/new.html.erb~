@@ -1,26 +1,117 @@
-<h2>Log in</h2>
+
+<%= render 'inicio/header' %>
+<!-- Inicia banner -->
+<section class="home" data-stellar-background-ratio="0.4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="st-home-unit">
+          <div class="hero-txt">
+            <h2 class="hero-title">Mexican Migration Project</h2>
+            <a href="#participa" class="btn btn-main btn-lg">Participa</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mouse-icon">
+    <div class="wheel"></div>
+  </div>
+</section>
+<!-- Termina banner -->
+<section class="blog">
+  <div class="container">
+    <div class="row"> 
+      <!-- Inicia descripción -->
+      <div class="col-md-8" style="border-right: 2px solid;">
+        <div class="blog-post">
+          <h2 class="post-title">Proyecto sobre Migración Mexicana</h2>
+          <div class="post-content">
+            <p>El Proyecto Sobre Migración Mexicana (MMP) fue creado en 1982 por un grupo interdisciplinario de inverstigadores de México y los Estados Unidos, con el fin de agrandar y mejorar nuestros conocimientos sobre el proceso de migración mexicana hacia los Estados Unidos. El estudio se encuentra bajo la dirección conjunta del antropólogo Jorge Durand quien es investigador del Centro de Estudios sobre Movimientos Sociales de la Universidad de Guadalajara, y del sociólogo Douglas S. Massey, investigador de la Oficina de Investigación de Población de la Universidad de Princeton.</p>
+            <p>Desde su concepción, el MMP se ha enfocado a la tarea de recabar información social, económica y demográfica sobre el proceso migratorio entre México y los Estados Unidos. La información recabada está siendo compilada en una extensa base de datos cuyo uso se encuentra abierto al público a través de este sitio de internet.</p>
+            <p>Los datos del MMP permiten a los investigadores estudiar patrones y procesos de la migración contemporanea México-EE.UU. El proyecto es un esfuerzo multidisciplinario que genera datos publicos sobre las características y comportamiento de migrantes mexicanos.</p>
+            <p><a href="http://mmp.opr.princeton.edu/home-es.aspx" target="_blank" class="btn btn-main btn-group-sm">Más información</a></p>
+            <h2 class="post-title">Objetivos del MMP</h2>
+            <div class="post-content">
+              <ul>
+                <li>Recabar y mantener información precisa y fidedigna sobre las características y el comportamiento de la población de mexicanos emigrantes, documentados e indocumentados, hacia los Estados Unidos.</li>
+                <li>Ofrecer el acceso público a la base de datos MMP con el fin de promover el desarrollo de estudios de caracter científico y/o educativo, y al mismo tiempo, mantener la confidencialidad de nuestros informantes.</li>
+                <li>Continuar la investigación sobre el proceso de migración transnacional entre México y los Estados Unidos.</li>
+              </ul>
+            </div>
+            <h2 class="post-title">Contacto</h2>
+            <div class="post-content">
+              <p>El MMP cuenta con oficinas en el Departamento de Estudios Sobre Movimientos Sociales de la Universidad de Guadalajara, en México, y en la Oficina de Investigación de Población de la Universidad de Princeton, en los Estados Unidos.</p>
+            </div>
+            <div class="col-md-6">
+              <h2 class="post-title">Estados Unidos</h2>
+              <div class="post-content">
+                <p>Office of Population Research<br>
+                  Princeton University<br>
+                  Wallace Hall, Room 237<br>
+                  Princeton, NJ 08544<br>
+                  Tel: 609-258-8155<br>
+                  Fax: 609-258-1039</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h2 class="post-title">México</h2>
+              <div class="post-content">
+                <p>Depto. de Estudios Sobre Movimientos Sociales (DESMOS)<br>
+                  Universidad de Guadalajara <br>
+                  Av. Maestros y Alcalde, Puerta Num. 1 <br>
+                  Edificio G, 4o Piso <br>
+                  Guadalajara, CP 44269 <br>
+                  Jalisco, México <br>
+                  Tel:  011-52-333-819-3327<br>
+                  Fax: 011-52-333-819-3328<br>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Termina descripción --> 
+      <!-- Inicia participa -->
+      <div class="col-md-4">
+        <h2 class="post-title" id="participa" style="margin-top: 0">¡PARTICIPA!</h2>
+        <div class="post-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et felis massa. Nunc aliquam accumsan tellus, id efficitur tellus iaculis vitae.</p>
+        </div>
+        <p><strong>Ingrese la contraseña que le proporcionó el entrevistador:</strong></p>
+        <div class="widget contact" style="padding: 0">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+
+    <%= f.field :usuario, autofocus: true, placeholder: "Usuario", class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+    <%= f.password_field :password, autocomplete: "off", placehoder: "Contraseña", class: "form-control" %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+<% if false %>
+          <form class="contact-form">
+            <input type="text" class="form-control" id="fname" name="fname" placeholder="Usuario">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Contraseña">
+            <br>
+            <button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Ingresando...">Ingresar <i class="fa fa-arrow-circle-o-right"></i></button>
+          </form>
+<% end %>
+          <div id="result-message" role="alert"></div>
+        </div>
+      </div>
+      <!-- Termina participa --> 
+    </div>
+  </div>
+</section>
+<!-- Inicia pie -->
+<%= render 'inicio/footer' %>
+<!-- Termina pie --> 
+
