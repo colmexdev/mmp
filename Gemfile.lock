@@ -94,6 +94,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     gon (6.1.0)
@@ -234,6 +236,7 @@ DEPENDENCIES
   crossfilter-rails
   d3-rails
   devise
+  font-awesome-sass
   gon
   jbuilder (~> 2.0)
   jquery-rails
