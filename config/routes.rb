@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations"}, :path => '', :path_names => {:sign_in => '', :sign_up => 'r3_s3rI0'}
 
   get 'terminos_y_condiciones' => 'inicio#inicio_usr', :as => :inicio_usr
+  get 'formulario' => 'inicio#formulario', :as => :formulario
+  post 'formulario' => 'inicio#crear_formulario', :as => :save_form
+  get 'respuesta' => 'inicio#respuesta', :as => :respuesta
 
   get 'algo' => 'inicio#inicio', :as => :prueba
 

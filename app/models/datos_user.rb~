@@ -1,0 +1,6 @@
+class DatosUser < ActiveRecord::Base
+  validates_presence_of :nombre
+  validates_presence_of :pref
+  validates_presence_of :localidad
+  validates :telefono, presence: true, if: "email.blank?"
+end

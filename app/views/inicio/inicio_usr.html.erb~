@@ -6,7 +6,7 @@
       <div class="col-md-12">
         <div class="c2a">
          <br>
-          <h2><%=  %></h2>
+          <h2><%= @lugares[current_user.usuario.to_sym][0] %></h2>
 			<p>&nbsp;</p>
           </div>
       </div>
@@ -19,11 +19,9 @@
     <div class="row">
       <div class="col-md-10">
         <div class="blog-post">
-          <h2 class="post-title"><%=  %>.</h2>
+          <h2 class="post-title"><%= @lugares[current_user.usuario.to_sym][0] %>.</h2>
           <div class="post-content">
-            <p><%=  %></p>
-            <p><%= current_user.usuario.to_sym %></p>
-						<p><%= current_user.usuario.to_sym.class %></p>
+            <p><%= @lugares[current_user.usuario.to_sym][1] %></p>
                 </div>
               <!-- Inicia Términos y condiciones -->
           <h2 class="post-title">Términos y condiciones</h2>

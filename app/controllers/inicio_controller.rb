@@ -1,7 +1,28 @@
 class InicioController < ApplicationController
-  before_action :authenticate_user!, only: [:inicio_usr]
+  before_action :authenticate_user!, only: [:inicio_usr,:formulario,:crear_formulario]
+  before_action :set_localidad, only: [:formulario,:crear_formulario]
 
   def inicio
+  end
+
+  def formulario
+    @form = DatosUser.new
+  end
+
+  def crear_formulario
+    @form = DatosUser.new(form_params)
+    respond_to do |format|
+      if @form.save
+        format.html { redirect_to respuesta_path, notice: 'Datos recabados con éxito.' }
+        #format.json { render :show, status: :created, location: @catedra }
+      else
+        format.html { render :formulario }
+        format.json { render json: @form.errors, status: :unprocessable_entity }
+      end
+  end
+
+  def respuesta
+
   end
 
   def inicio_usr
@@ -14,5 +35,16 @@ class InicioController < ApplicationController
     respond_to do |format|
       format.html
     end
+  end
+
+  protected
+
+  def set_localidad
+    locs = {usuario1: "Ixtlilco el grande, Tepalcingo", usuario2: "Jantetelco, Jantetelco", usuario3: "Marcelino Rodiguez, Axochiapán", usuario4: "San Gabriel Amacuitlapiclo, Jonacatepec", usuario5: "Tetela del volcán"}
+    @loc = locs[current_user.usuario.to_sym]
+  end
+
+  def form_params
+    params.require(:datos_user).permit(:nombre, :email, :telefono, :pref, :localidad)
   end
 end

@@ -1,0 +1,13 @@
+class CreateDatosUsers < ActiveRecord::Migration
+  def change
+    create_table :datos_users do |t|
+      t.text :nombre
+      t.text :email
+      t.text :telefono
+      t.text :pref
+      t.text :localidad
+
+      t.timestamps null: false
+    end
+  end
+end
