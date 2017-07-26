@@ -28,6 +28,9 @@
     			<%= f.text_field :telefono, placeholder: "Teléfono", class: "form-control" %>
     			<%= f.text_field :pref, placeholder: "Preferencia de contacto", class: "form-control" %>
     			<%= f.hidden_field :localidad, value: @loc %>
+    
+					<%= button_tag(type: 'submit', name: 'commit', value: "Enviar", class: "btn btn-main btn-lg", id: 'send', 'data-loading-text': "<i class='fa fa-spinner fa-spin'></i> Ingresando..." ) do %>Enviar <i class="fa fa-paper-plane "></i>
+		<% end %>
 				<% end %>
 
 				<% if false %>

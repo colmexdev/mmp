@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="c2a"> <br>
-          <h2>Ixtlilco el grande, Tepalcingo</h2>
+          <h2><%= @loc %></h2>
           <p>&nbsp;</p>
         </div>
       </div>
@@ -21,6 +21,16 @@
         <h2 class="post-title">Cuestionario</h2>
         <h2 class="post-title">Favor de llenar los siguientes campos:</h2>
         <!-- Inicia cuestionario -->
+				<%= form_for(@form, as: 'datos_user', url: save_form_path) do |f| %>
+
+    			<%= f.text_field :nombre, autofocus: true, placeholder: "Nombre", class: "form-control" %>
+    			<%= f.text_field :email, placeholder: "Correo electrónico", class: "form-control" %>
+    			<%= f.text_field :telefono, placeholder: "Teléfono", class: "form-control" %>
+    			<%= f.text_field :pref, placeholder: "Preferencia de contacto", class: "form-control" %>
+    			<%= f.hidden_field :localidad, value: @loc %>
+				<% end %>
+
+				<% if false %>
         <form class="contact-form">
           <input type="text" class="form-control" id="fname" name="fname" placeholder="Nombre completo">
           <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico">
@@ -28,6 +38,7 @@
           <input type="text" class="form-control" id="medio" name="medio" placeholder="Prefiero se contactado(a) por:">
           <button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Enviando..."> Enviar <i class="fa fa-paper-plane "></i> </button>
         </form>
+				<% end %>
         <!-- Termina cuestionario -->
         <div id="result-message" role="alert"></div>
       </div>
@@ -35,3 +46,4 @@
   </div>
 </section>
 <%= render 'inicio/footer' %>
+
