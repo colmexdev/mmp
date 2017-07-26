@@ -5,9 +5,6 @@ class ApplicationController < ActionController::Base
 
   protected
   def after_sign_in_path_for(resource)
-    logger.debug resource.inspect
-    logger.debug prueba_path
-    logger.debug params
     prueba_path
     #if resource_name == "user"
     #  prueba_path
