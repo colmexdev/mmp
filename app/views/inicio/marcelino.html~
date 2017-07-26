@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mexican Migration Project</title>
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:400i,700i" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!--link href="css/owl.carousel.css" rel="stylesheet">
+<link href="css/owl.theme.css" rel="stylesheet">
+<link href="css/owl.transitions.css" rel="stylesheet"-->
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".main-nav">
+<header class="st-navbar"> 
+  <!-- Inicia Navegación -->
+  <nav class="navbar navbar-default navbar-fixed-top clearfix">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#moviles"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a class="navbar-brand" href="index.html"><img src="images/logo-mmp.png" alt="" class="img-responsive mmp"></a></div>
+      <!-- Navegación Pantallas chicas-->
+      <div class="collapse oculto" id="moviles">
+        <ul class="nav navbar-nav principal">
+          <li><a href="https://www.colmex.mx/" target="_blank">El Colegio de México</a></li>
+          <li><a href="https://www.princeton.edu/" target="_blank">Princeton University</a> </li>
+        </ul>
+      </div>
+      <!-- Navegación Pantallas grandes-->
+      <div class="collapse navbar-collapse main-nav" id="escritorio">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="navbar-brand" href="https://www.colmex.mx/" target="_blank"><img src="images/colmex.png" alt="El Colegio de México" class="img-responsive"></a></li>
+          <li><a class="navbar-brand" href="https://www.princeton.edu/" target="_blank"><img src="images/princeton.png" alt="Princeton University" class="img-responsive"></a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </div>
+  </nav>
+  <!-- Termina Navegación --> 
+</header>
+<!-- Inicia banner -->
+<section class="call-2-acction marcelino" data-stellar-background-ratio="0.4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="c2a"> <br>
+          <h2>Marcelino Rodiguez, Axochiapán</h2>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Termina banner -->
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="blog-post">
+          <h2 class="post-title">Marcelino Rodiguez, Axochiapán.</h2>
+          <div class="post-content">
+            <p>Los lugareños prefieren llamarle por su nombre anterior " San Ignacio", alta incidencia en casas deshabitadas a las orillas del pueblo, por las mañanas los hombres mayores o jornaleros esperaban en una esquina a 2 cuadras del centro a la espera de trabajo. El mayor atractivo turístico es un balneario llamado "Los Amates".</p>
+          </div>
+          <!-- Inicia Términos y condiciones -->
+          <h2 class="post-title">Términos y condiciones</h2>
+          <div class="post-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis elit, facilisis vel urna sit amet, dignissim lacinia nunc. Morbi nisl est, imperdiet nec arcu eu, dictum imperdiet ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed bibendum ultrices lacus nec varius.</p>
+            <p>Vestibulum sagittis risus vel lectus faucibus molestie. Phasellus pretium turpis urna, sit amet aliquam augue rhoncus non. Curabitur pulvinar tortor sed massa euismod gravida vitae ut magna. Donec dapibus purus sed ultricies congue.</p>
+            <p>Integer euismod ultricies venenatis. In justo purus, egestas ut vehicula eu, mattis maximus elit. Aliquam vulputate eros et erat facilisis vestibulum. Curabitur lobortis nulla neque, non bibendum nisl laoreet vel. Maecenas volutpat, urna a fringilla laoreet, nisi elit egestas elit, at aliquet eros nulla sed magna. </p>
+            <p>Vivamus porta gravida sem, quis cursus turpis. Praesent non commodo ligula, vitae accumsan velit. Cras in leo sed quam mollis placerat non in risus. Vivamus imperdiet quis felis a lobortis. Nunc iaculis arcu nec neque dictum, non vehicula tortor volutpat.</p>
+          </div>
+          <h2 class="post-title text-right">Estoy de acuerdo en participar&nbsp; &nbsp;<a href="index.html" class="btn btn-lg btn-dark">No acepto</a> <a href="marcelino-cuestionario.html" class="btn btn-main btn-lg">Acepto</a></h2>
+          <!-- Termina Términos y condiciones --> 
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Inicia pie -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"> Derechos reservados, El Colegio de México A.C. © 2017<br>
+        Camino al Ajusco número 20, Colonia Pedregal de Santa Teresa, C.P. 10740 México, Ciudad de México<br>
+        Tel.: +52 55 54493000 </div>
+    </div>
+  </div>
+</footer>
+<!-- Termina pie --> 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.stellar.js"></script> 
+<script src="js/jquery.appear.js"></script> 
+<script src="js/jquery.nicescroll.min.js"></script> 
+<script src="js/script.js"></script> 
+<!--script src="js/jquery.easing.min.js"></script> 
+<script src="js/jquery.countTo.js"></script> 
+<script src="js/jquery.shuffle.modernizr.js"></script> 
+<script src="js/jquery.shuffle.js"></script> 
+<script src="js/owl.carousel.js"></script> 
+<script src="js/jquery.ajaxchimp.min.js"></script-->
+</body>
+</html>

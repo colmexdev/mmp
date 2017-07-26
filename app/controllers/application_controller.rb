@@ -5,18 +5,18 @@ class ApplicationController < ActionController::Base
 
   protected
   def after_sign_in_path_for(resource)
-    prueba_path
+    inicio_usr_path
     #if resource_name == "user"
     #  prueba_path
     #end
   end
 
   def after_sign_up_path_for(resource)
+    logger.debug resource
     root_path
   end
 
   def after_sign_out_path_for(resource_or_scope)
-    logger.debug resource_or_scope.inspect
     if resource_or_scope == :user
       root_path
     end

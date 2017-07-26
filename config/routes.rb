@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations"}, :path => '', :path_names => {:sign_in => 'inicio', :sign_up => 'registro'}
 
+  get 'terminos_y_condiciones' => 'inicio#inicio_usr', :as => :inicio_usr
+
   get 'algo' => 'inicio#inicio', :as => :prueba
 
   # The priority is based upon order of creation: first created -> highest priority.
