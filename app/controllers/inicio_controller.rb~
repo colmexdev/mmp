@@ -21,6 +21,10 @@ class InicioController < ApplicationController
       end
   end
 
+  def respuesta
+
+  end
+
   def inicio_usr
     @lugares = {
 			usuario1: ["Ixtlilco el grande, Tepalcingo", "La comida china es un distintivo de la comunidad (la mayoría retornados), destino principal para los migrantes: Minneapolis, Minnesota, día de plaza: miércoles. La gente en Ixtlilco es más abierta al compartir su historia, en su plaza hay una panadería montada en un puesto de tianguis."], 
