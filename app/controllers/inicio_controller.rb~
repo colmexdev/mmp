@@ -19,6 +19,7 @@ class InicioController < ApplicationController
         format.html { render :formulario }
         format.json { render json: @form.errors, status: :unprocessable_entity }
       end
+    end
   end
 
   def respuesta
