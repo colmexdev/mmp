@@ -22,7 +22,7 @@
           <h2 class="post-title"><%= @lugar %></h2>
           <div class="post-content">
             <p><%= @desc_lugar %></p>
-            <p><%= params %></p>
+            <p><%= current_user.usuario %></p>
                 </div>
               <!-- Inicia Términos y condiciones -->
           <h2 class="post-title">Términos y condiciones</h2>
