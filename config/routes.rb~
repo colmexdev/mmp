@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => { :registrations => "registrations"}, :path => '', :path_names => {:sign_in => 'inicio', :sign_up => 'registro'}
+  devise_for :users, :controllers => { :registrations => "registrations"}, :path => '', :path_names => {:sign_in => '', :sign_up => 'r3g_us3rI0'}
 
-  get 'intro' => 'inicio#inicio_usr', :as => :inicio_usr
+  get 'terminos_y_condiciones' => 'inicio#inicio_usr', :as => :inicio_usr
 
   get 'algo' => 'inicio#inicio', :as => :prueba
 
