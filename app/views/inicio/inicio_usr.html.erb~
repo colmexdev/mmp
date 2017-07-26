@@ -6,7 +6,7 @@
       <div class="col-md-12">
         <div class="c2a">
          <br>
-          <h2><%= @lugar %></h2>
+          <h2><%= @lugares[current_user.usuario][0] %></h2>
 			<p>&nbsp;</p>
           </div>
       </div>
@@ -19,9 +19,9 @@
     <div class="row">
       <div class="col-md-10">
         <div class="blog-post">
-          <h2 class="post-title"><%= @lugar %></h2>
+          <h2 class="post-title"><%= @lugares[current_user.usuario][0] %>.</h2>
           <div class="post-content">
-            <p><%= @desc_lugar %></p>
+            <p><%= @lugares[current_user.usuario][1] %></p>
             <p><%= current_user.usuario %></p>
                 </div>
               <!-- Inicia Términos y condiciones -->
