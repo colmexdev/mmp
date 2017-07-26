@@ -22,8 +22,8 @@
           <h2 class="post-title"><%=  %>.</h2>
           <div class="post-content">
             <p><%=  %></p>
-            <p><%= current_user.usuario %></p>
-						<p><%= current_user.usuario.class %></p>
+            <p><%= current_user.usuario.to_sym %></p>
+						<p><%= current_user.usuario.to_sym.class %></p>
                 </div>
               <!-- Inicia Términos y condiciones -->
           <h2 class="post-title">Términos y condiciones</h2>
