@@ -1,0 +1,97 @@
+<% render 'inicio/header' %>
+<!-- Inicia banner -->
+<section class="call-2-acction ixtlilco" data-stellar-background-ratio="0.4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="c2a"> <br>
+          <h2>Ixtlilco el grande, Tepalcingo</h2>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Termina banner -->
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="blog-post" style="margin-bottom: 0">
+          <h2 class="post-title">Datos recopilados</h2>
+          <div class="post-content">
+            <p><a href="#" class="btn-link">Descargar datos</a></p>
+            <p><a href="index.html" class="btn btn-main btn-lg">Cerrar sesión <i class="fa fa-sign-out"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12"> 
+        <!-- Inicia tabla -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Correo electrónico</th>
+              <th>Número de teléfono móvil</th>
+              <th>Medio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nombre Apellido Apellido</td>
+              <td>ejemplo@dominio.com</td>
+              <td>+1 1234567890</td>
+              <td>Correo electrónico</td>
+            </tr>
+            <tr>
+              <td>Nombre Apellido Apellido</td>
+              <td>ejemplo@dominio.com</td>
+              <td>+1 1234567890</td>
+              <td>Teléfono</td>
+            </tr>
+            <tr>
+              <td>Nombre Apellido Apellido</td>
+              <td>ejemplo@dominio.com</td>
+              <td>+1 1234567890</td>
+              <td>Correo electrónico</td>
+            </tr>
+            <tr>
+              <td>Nombre Apellido Apellido</td>
+              <td>ejemplo@dominio.com</td>
+              <td>+1 1234567890</td>
+              <td>Teléfono</td>
+            </tr>
+            <tr>
+              <td>Nombre Apellido Apellido</td>
+              <td>ejemplo@dominio.com</td>
+              <td>+1 1234567890</td>
+              <td>Correo electrónico</td>
+            </tr>
+            <tr>
+              <td>Nombre Apellido Apellido</td>
+              <td>ejemplo@dominio.com</td>
+              <td>+1 1234567890</td>
+              <td>Teléfono</td>
+            </tr>
+            <tr>
+              <td>Nombre Apellido Apellido</td>
+              <td>ejemplo@dominio.com</td>
+              <td>+1 1234567890</td>
+              <td>Correo electrónico</td>
+            </tr>
+            <tr>
+              <td>Nombre Apellido Apellido</td>
+              <td>ejemplo@dominio.com</td>
+              <td>+1 1234567890</td>
+              <td>Teléfono</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Termina tabla --> 
+      </div>
+    </div>
+  </div>
+</section>
+<%= render 'inicio/footer' %>
