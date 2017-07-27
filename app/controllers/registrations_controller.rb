@@ -6,9 +6,8 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
+    logger.debug sign_up_params
     build_resource(sign_up_params)
-    logger.debug resource
-    logger.debug resource.methods
     respond_to do |format|
       if resource.save
         logger.debug @user.errors
