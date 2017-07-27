@@ -11,6 +11,7 @@ class RegistrationsController < Devise::RegistrationsController
     logger.debug resource.methods
     respond_to do |format|
       if resource.save
+        logger.debug @user.errors
         format.html { redirect_to root_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
