@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
 
   protected
   def after_sign_in_path_for(resource)
-    logger.debug resource
+    logger.debug resource_name.class
+    logger.debug resource.methods
     inicio_usr_path
   end
 
