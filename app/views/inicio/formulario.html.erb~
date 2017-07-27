@@ -28,17 +28,11 @@
     			<%= f.text_field :telefono, placeholder: "Teléfono", class: "form-control" %>
     			<%= f.text_field :pref, placeholder: "Preferencia de contacto", class: "form-control" %>
     			<%= f.hidden_field :localidad, value: @loc %>
+    
+					<%= button_tag(type: 'submit', name: 'commit', value: "Enviar", class: "btn btn-main btn-lg", id: 'send', 'data-loading-text': "<i class='fa fa-spinner fa-spin'></i> Ingresando..." ) do %>Enviar <i class="fa fa-paper-plane "></i>
+		<% end %>
 				<% end %>
 
-				<% if false %>
-        <form class="contact-form">
-          <input type="text" class="form-control" id="fname" name="fname" placeholder="Nombre completo">
-          <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico">
-          <input type="text" class="form-control" id="phone" name="phone" placeholder="Número de teléfono móvil (con lada internacional):">
-          <input type="text" class="form-control" id="medio" name="medio" placeholder="Prefiero se contactado(a) por:">
-          <button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Enviando..."> Enviar <i class="fa fa-paper-plane "></i> </button>
-        </form>
-				<% end %>
         <!-- Termina cuestionario -->
         <div id="result-message" role="alert"></div>
       </div>

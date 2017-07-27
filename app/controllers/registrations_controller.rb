@@ -7,10 +7,11 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     build_resource(sign_up_params)
-
+    logger.debug resource
+    logger.debug resource.methods
     respond_to do |format|
       if resource.save
-        format.html { redirect_to root_path, notice: 'Admin was successfully created.' }
+        format.html { redirect_to root_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
