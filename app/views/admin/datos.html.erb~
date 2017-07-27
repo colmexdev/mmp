@@ -43,54 +43,14 @@ Cerrar sesión <i class="fa fa-sign-out"></i>
             </tr>
           </thead>
           <tbody>
+						<%= @datos.each do |d| %>
             <tr>
-              <td>Nombre Apellido Apellido</td>
-              <td>ejemplo@dominio.com</td>
-              <td>+1 1234567890</td>
-              <td>Correo electrónico</td>
+              <td><%= d.nombre %></td>
+              <td><%= d.email %></td>
+              <td><%= d.telefono %></td>
+              <td><%= d.pref %></td>
             </tr>
-            <tr>
-              <td>Nombre Apellido Apellido</td>
-              <td>ejemplo@dominio.com</td>
-              <td>+1 1234567890</td>
-              <td>Teléfono</td>
-            </tr>
-            <tr>
-              <td>Nombre Apellido Apellido</td>
-              <td>ejemplo@dominio.com</td>
-              <td>+1 1234567890</td>
-              <td>Correo electrónico</td>
-            </tr>
-            <tr>
-              <td>Nombre Apellido Apellido</td>
-              <td>ejemplo@dominio.com</td>
-              <td>+1 1234567890</td>
-              <td>Teléfono</td>
-            </tr>
-            <tr>
-              <td>Nombre Apellido Apellido</td>
-              <td>ejemplo@dominio.com</td>
-              <td>+1 1234567890</td>
-              <td>Correo electrónico</td>
-            </tr>
-            <tr>
-              <td>Nombre Apellido Apellido</td>
-              <td>ejemplo@dominio.com</td>
-              <td>+1 1234567890</td>
-              <td>Teléfono</td>
-            </tr>
-            <tr>
-              <td>Nombre Apellido Apellido</td>
-              <td>ejemplo@dominio.com</td>
-              <td>+1 1234567890</td>
-              <td>Correo electrónico</td>
-            </tr>
-            <tr>
-              <td>Nombre Apellido Apellido</td>
-              <td>ejemplo@dominio.com</td>
-              <td>+1 1234567890</td>
-              <td>Teléfono</td>
-            </tr>
+						<% end %>
           </tbody>
         </table>
         <!-- Termina tabla --> 
