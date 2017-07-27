@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => { :registrations => "registrations"}, :path => '', :path_names => {:sign_in => '', :sign_up => 'r3_s3rI0'}
+  devise_for :users, :controllers => { :registrations => "registrations"}, :path => '', :path_names => {:sign_in => 'inicio', :sign_up => 'r3_s3rI0'}
   devise_for :admins
 
   get 'terminos_y_condiciones' => 'inicio#inicio_usr', :as => :inicio_usr
