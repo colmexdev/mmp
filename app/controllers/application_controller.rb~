@@ -12,10 +12,10 @@ class ApplicationController < ActionController::Base
     inicio_usr_path
   end
 
-  def after_sign_up_path_for(resource)
-    logger.debug resource
-    root_path
-  end
+  #def after_sign_up_path_for(resource)
+  #  logger.debug resource
+  #  root_path
+  #end
 
   def after_sign_out_path_for(resource_or_scope)
     if resource_or_scope == :user
