@@ -1,8 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
-  skip_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
+  before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
 
   def new
-    logger.debug "Hola"
     super
   end
 
