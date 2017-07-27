@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates_presence_of :usuario
   def email_required? 
     false 
   end
@@ -12,4 +11,6 @@ class User < ActiveRecord::Base
   def email_changed? 
     false 
   end
+
+  validates_presence_of :usuario
 end

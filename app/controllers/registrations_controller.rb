@@ -1,5 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
+  skip_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
 
   def new
     super

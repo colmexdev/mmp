@@ -5,4 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates_presence_of :usuario
+  def email_required? 
+    false 
+  end
+
+  def email_changed? 
+    false 
+  end
 end
