@@ -4,6 +4,7 @@ class AdminController < ApplicationController
   before_action :set_adm_class
 
   def datos
+    @datos = DatosUser.where("localidad = ?",@loc)
   end
 
   protected
