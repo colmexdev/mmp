@@ -31,7 +31,7 @@
             <p>Integer euismod ultricies venenatis. In justo purus, egestas ut vehicula eu, mattis maximus elit. Aliquam vulputate eros et erat facilisis vestibulum. Curabitur lobortis nulla neque, non bibendum nisl laoreet vel. Maecenas volutpat, urna a fringilla laoreet, nisi elit egestas elit, at aliquet eros nulla sed magna. </p>
             <p>Vivamus porta gravida sem, quis cursus turpis. Praesent non commodo ligula, vitae accumsan velit. Cras in leo sed quam mollis placerat non in risus. Vivamus imperdiet quis felis a lobortis. Nunc iaculis arcu nec neque dictum, non vehicula tortor volutpat.</p>
           </div>
-          <h2 class="post-title text-right">Estoy de acuerdo en participar&nbsp; &nbsp;<a href="index.html" class="btn btn-lg btn-dark">No acepto</a> <a href="tetela-cuestionario.html" class="btn btn-main btn-lg">Acepto</a></h2>
+          <h2 class="post-title text-right">Estoy de acuerdo en participar&nbsp; &nbsp;<%= link_to "No acepto",destroy_user_session_path, method: "DELETE", class: "btn btn-lg btn-dark" %> <%= link_to "Acepto",formulario_path, class: "btn btn-main btn-lg" %></h2>
           <!-- Termina Términos y condiciones --> 
         </div>
       </div>

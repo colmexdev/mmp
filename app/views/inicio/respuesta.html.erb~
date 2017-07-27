@@ -19,7 +19,7 @@
       <div class="col-md-10"> 
         <!-- inicia respuesta -->
         <div class="blog-post">
-          <h3>Gracias por responder el Cuestionario en breve recibirás un correo electrónico de confirmación y pronto serás contactado por un entrevistador del proyecto.</h3>
+          <h3>Gracias por responder el cuestionario. En breve recibirás un correo electrónico de confirmación y pronto serás contactado por un entrevistador del proyecto.</h3>
           <p><%= link_to destroy_user_session_path, method: "DELETE", class: "btn btn-main btn-lg" do %>
 <i class="fa fa-arrow-circle-o-left"></i>Volver
 <% end %></p>

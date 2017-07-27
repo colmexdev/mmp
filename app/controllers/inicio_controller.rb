@@ -42,7 +42,8 @@ class InicioController < ApplicationController
 
   def set_localidad
     locs = {usuario1: "Ixtlilco el grande, Tepalcingo", usuario2: "Jantetelco, Jantetelco", usuario3: "Marcelino Rodiguez, Axochiapán", usuario4: "San Gabriel Amacuitlapiclo, Jonacatepec", usuario5: "Tetela del volcán"}
-    @loc = locs[current_user.usuario.to_sym]
+    h_class = {usuario1: "ixtlico", usuario2: "jantetelco", usuario3: "marcelino", usuario4: "san-gabriel", usuario5: "tetela"}
+    @loc, @class = locs[current_user.usuario.to_sym], h_class[current_user.usuario.to_sym]
   end
 
   def form_params

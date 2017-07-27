@@ -12,9 +12,9 @@ class RegistrationsController < Devise::RegistrationsController
     respond_to do |format|
       if resource.save
         format.html { redirect_to root_path, notice: 'User was successfully created.' }
-        #format.json { render :show, status: :created, location: @user }
+        format.json { render :show, status: :created, location: @user }
       else
-        logger.debug
+        logger.debug @user.errors
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end

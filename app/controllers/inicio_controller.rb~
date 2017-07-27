@@ -1,6 +1,6 @@
 class InicioController < ApplicationController
-  before_action :authenticate_user!, only: [:inicio_usr,:formulario,:crear_formulario]
-  before_action :set_localidad, only: [:formulario,:crear_formulario]
+  before_action :authenticate_user!, only: [:inicio_usr,:formulario,:crear_formulario,:respuesta]
+  before_action :set_localidad, only: [:formulario,:crear_formulario,:respuesta]
 
   def inicio
   end
