@@ -20,7 +20,7 @@
         <div class="blog-post" style="margin-bottom: 0">
           <h2 class="post-title">Datos recopilados</h2>
           <div class="post-content">
-            <p><a href="#" class="btn btn-link">Descargar datos</a></p>
+            <p><a href="<%= descarga_pdf_path %>" class="btn btn-link">Descargar datos</a></p>
             <p><%= link_to destroy_admin_session_path, method: "DELETE", class: "btn btn-main btn-lg" do %>
 Cerrar sesión <i class="fa fa-sign-out"></i>
 <% end %>
@@ -43,7 +43,7 @@ Cerrar sesión <i class="fa fa-sign-out"></i>
             </tr>
           </thead>
           <tbody>
-						<%= @datos.each do |d| %>
+						<% @datos.each do |d| %>
             <tr>
               <td><%= d.nombre %></td>
               <td><%= d.email %></td>

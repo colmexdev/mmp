@@ -24,6 +24,11 @@ gem 'gon'
 
 gem 'font-awesome-sass'
 
+# gemas para renderizar pdf
+gem 'pdfkit'
+gem 'render_anywhere'
+gem 'wkhtmltopdf-binary'
+
 #analytics-ruby para integrar Segment.io para analíticos
 #gem 'analytics-ruby', '~> 2.0.0', :require => "segment/analytics"
 

@@ -136,6 +136,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pdfkit (0.8.2)
     pg (0.21.0)
     rack (1.6.8)
     rack-test (0.6.3)
@@ -170,6 +171,8 @@ GEM
       ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
     remotipart (1.3.1)
+    render_anywhere (0.0.12)
+      rails (>= 3.0.7)
     request_store (1.3.1)
     responders (2.2.0)
       railties (>= 4.2.0, < 5.1)
@@ -218,6 +221,7 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    wkhtmltopdf-binary (0.12.3.1)
 
 PLATFORMS
   ruby
@@ -241,9 +245,11 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   paperclip
+  pdfkit
   pg
   rails (= 4.2.6)
   remotipart (~> 1.2)
+  render_anywhere
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
@@ -251,6 +257,7 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+  wkhtmltopdf-binary
 
 BUNDLED WITH
    1.12.5

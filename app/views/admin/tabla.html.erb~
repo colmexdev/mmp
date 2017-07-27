@@ -1,0 +1,27 @@
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12"> 
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Correo electrónico</th>
+              <th>Número de teléfono móvil</th>
+              <th>Medio</th>
+            </tr>
+          </thead>
+          <tbody>
+						<% filas.each do |d| %>
+            <tr>
+              <td><%= d.nombre %></td>
+              <td><%= d.email %></td>
+              <td><%= d.telefono %></td>
+              <td><%= d.pref %></td>
+            </tr>
+						<% end %>
+          </tbody>
+        </table>
+        <!-- Termina tabla --> 
+      </div>
+    </div>
+  </div>

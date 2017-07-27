@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get 'algo' => 'inicio#inicio', :as => :prueba
 
-  get 'admin_inicio' => 'admin#inicio', :as => :admin_inicio
+  get 'datos' => 'admin#datos', :as => :admin_datos
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
