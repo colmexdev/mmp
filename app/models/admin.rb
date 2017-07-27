@@ -4,5 +4,13 @@ class Admin < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  def email_required? 
+    false 
+  end
+
+  def email_changed? 
+    false 
+  end
+
   validates_presence_of :usuario
 end
