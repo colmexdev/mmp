@@ -13,7 +13,7 @@ class AdminController < ApplicationController
   end
 
   def set_adm_class
-    h_class = {admin1: "ixtlico", admin2: "jantetelco", admin3: "marcelino", admin4: "san-gabriel", admin5: "tetela"}
+    h_class = {admin1: "ixtlilco", admin2: "jantetelco", admin3: "marcelino", admin4: "san-gabriel", admin5: "tetela"}
     @class = h_class[current_admin.usuario.to_sym]
   end
 end
