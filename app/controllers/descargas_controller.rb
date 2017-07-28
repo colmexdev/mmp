@@ -20,7 +20,7 @@ class DescargasController < ApplicationController
   end
  
   def send_tabla_pdf
-    send_file tabla_pdf.to_pdf,
+    send_file tabla_pdf.a_pdf,
       filename: tabla_pdf.filename,
       type: "application/pdf",
       disposition: "attachment"
