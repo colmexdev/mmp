@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'respuesta' => 'inicio#respuesta', :as => :respuesta
   get 'descarga_pdf' => 'descargas#mostrar', :as => :descarga_pdf
 
-  get 'algo' => 'inicio#inicio', :as => :prueba
+  #get 'algo' => 'inicio#inicio', :as => :prueba
 
   get 'datos' => 'admin#datos', :as => :admin_datos
 

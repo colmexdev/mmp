@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'formulario' => 'inicio#formulario', :as => :formulario
   post 'formulario' => 'inicio#crear_formulario', :as => :save_form
   get 'respuesta' => 'inicio#respuesta', :as => :respuesta
+  get 'descarga_pdf' => 'descargas#mostrar', :as => :descarga_pdf
 
   get 'algo' => 'inicio#inicio', :as => :prueba
 

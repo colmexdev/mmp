@@ -12,6 +12,10 @@ class Tabla
     pdf.to_file("#{Rails.root}/public/data.pdf")
   end
 
+  def filename
+    "data.pdf"
+  end
+
   private
   #attr_reader :invoice
 
