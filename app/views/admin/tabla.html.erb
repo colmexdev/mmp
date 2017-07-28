@@ -17,12 +17,42 @@ table {
     background-color: transparent;
     border-spacing: 0;
     border-collapse: collapse;
+    display: table;
+    border-spacing: 2px;
+    border-color: grey;
 }
 
 .table {
     width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+td, th {
+    display: table-cell;
+}
+
+th{
+	font-weight: bold;
+	text-align: center;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
 }
 
 .table-striped>tbody>tr:nth-child(odd) {
