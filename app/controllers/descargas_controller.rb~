@@ -1,4 +1,6 @@
 class DescargasController < ApplicationController
+  before_action :authenticate_admin!
+  before_action :set_local
  
   def mostrar
     respond_to do |format|
@@ -7,6 +9,10 @@ class DescargasController < ApplicationController
   end
  
   private
+  def set_local
+    locs = {admin1: "Ixtlilco el grande, Tepalcingo", admin2: "Jantetelco, Jantetelco", admin3: "Marcelino Rodiguez, Axochiapán", admin4: "San Gabriel Amacuitlapiclo, Jonacatepec", admin5: "Tetela del volcán"}
+    @loc = locs[current_admin.usuario.to_sym]
+  end
  
   def tabla_pdf
     datos = DatosUser.where("localidad = ?",@loc)

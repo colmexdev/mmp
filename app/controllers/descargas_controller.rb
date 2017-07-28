@@ -4,7 +4,7 @@ class DescargasController < ApplicationController
  
   def mostrar
     respond_to do |format|
-      format.pdf { send_tabla_pdf }
+      format.html { send_tabla_pdf }
     end
   end
  
