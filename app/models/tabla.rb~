@@ -3,7 +3,7 @@ require "render_anywhere"
 class Tabla
   include RenderAnywhere
 
-  def filas(datos)
+  def initialize(datos)
     @filas = datos
   end
 
@@ -13,7 +13,7 @@ class Tabla
   end
 
   private
-  attr_reader :invoice
+  #attr_reader :invoice
 
   def html
     render template: "admin/tabla", layout: "application", locals: { filas: @filas }

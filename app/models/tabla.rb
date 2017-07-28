@@ -12,8 +12,12 @@ class Tabla
     pdf.to_file("#{Rails.root}/public/data.pdf")
   end
 
+  def filename
+    "data.pdf"
+  end
+
   private
-  attr_reader :invoice
+  #attr_reader :invoice
 
   def html
     render template: "admin/tabla", layout: "application", locals: { filas: @filas }
