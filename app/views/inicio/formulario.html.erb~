@@ -46,10 +46,11 @@ function changeSelect(){
 	var mail = $("#datos_user_email")[0].value;
 	var select = $("#datos_user_pref")[0];
 	var opts = select.options.length;
-	while(opts > 0){
-		select.remove(0);
+	while(opts > 1){
+		select.remove(1);
 		opts = select.options.length;
 	}
+	select.selectedIndex = 0;
 	if(tel != ""){
 		var phone = document.createElement("option");
 		var whats = document.createElement("option");
