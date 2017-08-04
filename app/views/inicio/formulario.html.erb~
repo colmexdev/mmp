@@ -45,9 +45,11 @@ function changeSelect(){
 	var tel = $("#datos_user_telefono")[0].value;
 	var mail = $("#datos_user_email")[0].value;
 	var select = $("#datos_user_pref")[0];
-	var opts = select.childNodes.length
-	while(select.childNodes.length != 0)
+	var opts = select.options.length;
+	while(opts > 0){
 		select.remove(0);
+		opts = select.options.length;
+	}
 	if(tel != ""){
 		var phone = document.createElement("option");
 		var whats = document.createElement("option");
