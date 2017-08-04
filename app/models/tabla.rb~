@@ -13,7 +13,7 @@ class Tabla
   end
 
   def filename
-    "data.pdf"
+    "data_usrs_#{DateTime.now}.pdf"
   end
 
   private

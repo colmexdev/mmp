@@ -24,9 +24,9 @@
 				<%= form_for(@form, as: 'datos_user', url: save_form_path) do |f| %>
 
     			<%= f.text_field :nombre, autofocus: true, placeholder: "Nombre", class: "form-control" %>
-    			<%= f.text_field :email, placeholder: "Correo electrónico", class: "form-control" %>
-    			<%= f.text_field :telefono, placeholder: "Teléfono", class: "form-control" %>
-    			<%= f.text_field :pref, placeholder: "Preferencia de contacto", class: "form-control" %>
+    			<%= f.text_field :email, placeholder: "Correo electrónico", class: "form-control", onchange: "changeSelect();" %>
+    			<%= f.text_field :telefono, placeholder: "Teléfono", class: "form-control", onchange: "changeSelect();" %>
+    			<%= f.select :pref, [], include_blank: true, prompt: "Preferencia de contacto", class: "form-control", disabled: true %>
     			<%= f.hidden_field :localidad, value: @loc %>
     
 					<%= button_tag(type: 'submit', name: 'commit', value: "Enviar", class: "btn btn-main btn-lg", id: 'send', 'data-loading-text': "<i class='fa fa-spinner fa-spin'></i> Ingresando..." ) do %>Enviar <i class="fa fa-paper-plane "></i>
@@ -40,4 +40,25 @@
   </div>
 </section>
 <%= render 'inicio/footer' %>
-
+<script type="text/javascript">
+function changeSelect(){
+	var tel = $("#datos_user_telefono")[0].value;
+	var mail = $("#datos_user_email")[0].value;
+	var select = $("#datos_user_pref")[0];
+	while(select.childNodes.length != 0)
+		select.remove(0);
+	if(tel != ""){
+		var phone = document.createElement("option");
+		var whats = document.createElement("option");
+		phone.text = "Llamada telefónica";
+		whats.text = "Mensaje (Whatsapp)";
+		select.add(phone);
+		select.add(whats);
+	}
+	if(mail != ""){
+		var email = document.createElement("option");
+		email.text = "Correo electrónico";
+		select.add(email);
+	}
+}
+</script>
