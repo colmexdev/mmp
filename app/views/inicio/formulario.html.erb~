@@ -26,7 +26,7 @@
     			<%= f.text_field :nombre, autofocus: true, placeholder: "Nombre", class: "form-control" %>
     			<%= f.text_field :email, placeholder: "Correo electrónico", class: "form-control", onchange: "changeSelect();" %>
     			<%= f.text_field :telefono, placeholder: "Teléfono", class: "form-control", onchange: "changeSelect();" %>
-    			<%= f.select :pref, [], placeholder: "Preferencia de contacto", class: "form-control", disabled: true %>
+    			<%= f.select :pref, [], prompt: "Preferencia de contacto", class: "form-control", disabled: true %>
     			<%= f.hidden_field :localidad, value: @loc %>
     
 					<%= button_tag(type: 'submit', name: 'commit', value: "Enviar", class: "btn btn-main btn-lg", id: 'send', 'data-loading-text': "<i class='fa fa-spinner fa-spin'></i> Ingresando..." ) do %>Enviar <i class="fa fa-paper-plane "></i>
@@ -45,6 +45,7 @@ function changeSelect(){
 	var tel = $("#datos_user_telefono")[0].value;
 	var mail = $("#datos_user_email")[0].value;
 	var select = $("#datos_user_pref")[0];
+	var opts = select.childNodes.length
 	while(select.childNodes.length != 0)
 		select.remove(0);
 	if(tel != ""){
