@@ -29,6 +29,7 @@ class InicioController < ApplicationController
 
   def inicio_usr
     @lugares = {
+			usuario: ["Ixtlilco el grande, Tepalcingo", "La comida china es un distintivo de la comunidad (la mayoría retornados), destino principal para los migrantes: Minneapolis, Minnesota, día de plaza: miércoles. La gente en Ixtlilco es más abierta al compartir su historia, en su plaza hay una panadería montada en un puesto de tianguis."], 
 			usuario1: ["Ixtlilco el grande, Tepalcingo", "La comida china es un distintivo de la comunidad (la mayoría retornados), destino principal para los migrantes: Minneapolis, Minnesota, día de plaza: miércoles. La gente en Ixtlilco es más abierta al compartir su historia, en su plaza hay una panadería montada en un puesto de tianguis."], 
 			usuario2: ["Jantetelco, Jantetelco","Lugar conocido por Mariano Matamoros de quien aún se conserva su dormitorio y fue de gran importancia junto a Morelos en la zona durante la Independencia. Otro atractivo turístico es el ex convento de San Pedro Apóstol quien es el santo patrono de la comunidad. De todas las comunidades, la plaza de Jantetelco fue la más arreglada, tenía nacimiento, árbol navideño, piñatas."], 
 			usuario3: ["Marcelino Rodiguez, Axochiapán","Los lugareños prefieren llamarle por su nombre anterior \"San Ignacio\", alta incidencia en casas deshabitadas a las orillas del pueblo, por las mañanas los hombres mayores o jornaleros esperaban en una esquina a 2 cuadras del centro a la espera de trabajo. El mayor atractivo turístico es un balneario llamado \"Los Amates\"."], 

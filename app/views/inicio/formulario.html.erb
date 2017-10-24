@@ -24,8 +24,8 @@
 				<%= form_for(@form, as: 'datos_user', url: save_form_path) do |f| %>
 
     			<%= f.text_field :nombre, autofocus: true, placeholder: "Nombre", class: "form-control" %>
-    			<%= f.text_field :email, placeholder: "Correo electrónico", class: "form-control", onchange: "changeSelect();" %>
-    			<%= f.text_field :telefono, placeholder: "Teléfono", class: "form-control", onchange: "changeSelect();" %>
+    			<%= f.text_field :email, placeholder: "Correo electrónico", class: "form-control", oninput: "changeSelect();" %>
+    			<%= f.text_field :telefono, placeholder: "Teléfono", class: "form-control", oninput: "changeSelect();" %>
     			<%= f.select :pref, [], prompt: "Preferencia de contacto", class: "form-control", disabled: true %>
     			<%= f.hidden_field :localidad, value: @loc %>
     

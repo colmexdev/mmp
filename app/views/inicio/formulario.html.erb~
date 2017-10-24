@@ -50,7 +50,6 @@ function changeSelect(){
 		select.remove(1);
 		opts = select.options.length;
 	}
-	select.selectedIndex = 0;
 	if(tel != ""){
 		var phone = document.createElement("option");
 		var whats = document.createElement("option");
@@ -64,5 +63,6 @@ function changeSelect(){
 		email.text = "Correo electrónico";
 		select.add(email);
 	}
+	select.selectedIndex = 0;
 }
 </script>
