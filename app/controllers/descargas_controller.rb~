@@ -21,7 +21,7 @@ class DescargasController < ApplicationController
     headers = %w{"Nombre","Correo","Teléfono","Medio","Localidad"}
     CSV.generate(headers: true) do |csv|
       csv << headers
-      Tabla.new(DatosUser.where("localidad = ?",@loc)).each do |usr|
+      DatosUser.where("localidad = ?",@loc).each do |usr|
         csv << [usr.nombre,usr.email,usr.telefono,usr.pref,usr.localidad]
       end
     end

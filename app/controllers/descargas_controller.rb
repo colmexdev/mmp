@@ -19,12 +19,12 @@ class DescargasController < ApplicationController
 
   def a_csv
     headers = %w{"Nombre","Correo","Teléfono","Medio","Localidad"}
-    CSV.generate(headers: true) do |csv|
+    (CSV.generate(headers: true) do |csv|
       csv << headers
       DatosUser.where("localidad = ?",@loc).each do |usr|
         csv << [usr.nombre,usr.email,usr.telefono,usr.pref,usr.localidad]
       end
-    end
+    end).encode("iso-8859-1")
   end
  
   def tabla_pdf
