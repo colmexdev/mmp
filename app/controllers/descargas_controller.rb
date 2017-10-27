@@ -1,6 +1,8 @@
 class DescargasController < ApplicationController
   before_action :authenticate_admin!
   before_action :set_local
+
+  require 'csv'
  
   def mostrar
     respond_to do |format|

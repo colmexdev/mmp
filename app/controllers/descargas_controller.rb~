@@ -5,7 +5,7 @@ class DescargasController < ApplicationController
   def mostrar
     respond_to do |format|
       format.html { send_tabla_pdf }
-      format.csv { send_data }
+      format.csv { send_data a_csv, filename: "users-#{Date.current}.csv"}
     end
   end
  
