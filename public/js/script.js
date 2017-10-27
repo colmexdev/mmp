@@ -39,6 +39,8 @@ $(function () {
 
 	try{
 	$('[data-toggle="tooltip"]').tooltip();
+	}catch(err){
+
 	}
 
 	
