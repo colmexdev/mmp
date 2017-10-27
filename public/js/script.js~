@@ -37,9 +37,7 @@ $(function () {
 		});
 	});
 
-	try{
 	$('[data-toggle="tooltip"]').tooltip();
-	}
 
 	
 
