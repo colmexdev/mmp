@@ -17,7 +17,6 @@ class Tabla
   end
 
   private
-  #attr_reader :invoice
 
   def html
     render template: "admin/tabla", layout: "application", locals: { filas: @filas }

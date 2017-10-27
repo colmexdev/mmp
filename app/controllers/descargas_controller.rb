@@ -5,6 +5,7 @@ class DescargasController < ApplicationController
   def mostrar
     respond_to do |format|
       format.html { send_tabla_pdf }
+      format.csv { send_data a_csv, filename: "users-#{Date.current}.csv"}
     end
   end
  
@@ -12,6 +13,16 @@ class DescargasController < ApplicationController
   def set_local
     locs = {admin1: "Ixtlilco el grande, Tepalcingo", admin2: "Jantetelco, Jantetelco", admin3: "Marcelino Rodiguez, Axochiapán", admin4: "San Gabriel Amacuitlapiclo, Jonacatepec", admin5: "Tetela del volcán"}
     @loc = locs[current_admin.usuario.to_sym]
+  end
+
+  def a_csv
+    headers = %w{"Nombre","Correo","Teléfono","Medio","Localidad"}
+    CSV.generate(headers: true) do |csv|
+      csv << headers
+      Tabla.new(DatosUser.where("localidad = ?",@loc)).each do |usr|
+        csv << [usr.nombre,usr.email,usr.telefono,usr.pref,usr.localidad]
+      end
+    end
   end
  
   def tabla_pdf

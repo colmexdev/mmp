@@ -9,7 +9,7 @@ class Tabla
 
   def a_pdf
     pdf = PDFKit.new(html,page_size: 'Letter')
-    pdf.to_file("#{Rails.root}/public/data.pdf")
+    pdf.to_file("#{Rails.root}/public/4arcH_d4T_x@.pdf")
   end
 
   def filename
