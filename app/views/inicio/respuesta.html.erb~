@@ -1,6 +1,6 @@
 <%= render 'inicio/header' %>
 <!-- Inicia banner -->
-<section class="call-2-acction ixtlilco" data-stellar-background-ratio="0.4">
+<section class="call-2-acction <%= @class %>" data-stellar-background-ratio="0.4">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -19,7 +19,8 @@
       <div class="col-md-10"> 
         <!-- inicia respuesta -->
         <div class="blog-post">
-          <h3>Gracias por responder el cuestionario. En breve recibirás un correo electrónico de confirmación y pronto serás contactado por un entrevistador del proyecto.</h3>
+          <h3><%= notice == "success" ? "Gracias por responder el cuestionario. En breve recibirás un correo electrónico de confirmación y pronto serás contactado por un entrevistador del proyecto." : "Comprendemos que, por motivos personales, no desee participar en nuestra encuesta. Gracias de todas maneras por su tiempo y atención." %></h3>
+
           <p><%= link_to destroy_user_session_path, method: "DELETE", class: "btn btn-main btn-lg" do %>
 <i class="fa fa-arrow-circle-o-left"></i>Volver
 <% end %></p>

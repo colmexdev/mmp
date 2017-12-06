@@ -18,7 +18,7 @@ class InicioController < ApplicationController
         #format.json { render :show, status: :created, location: @catedra }
       else
         format.html { redirect_to respuesta_path, notice: 'Cancelación de su participación.' }
-        format.json { render json: @form.errors, status: :unprocessable_entity }
+        #format.json { render json: @form.errors, status: :unprocessable_entity }
       end
     end
   end
