@@ -13,11 +13,11 @@ class InicioController < ApplicationController
   def crear_formulario
     @form = DatosUser.new(form_params)
     respond_to do |format|
-      if @form.save
-        format.html { redirect_to respuesta_path, notice: 'Datos recabados con éxito.' }
+      if (@form.telefono.present? || @form.correo.present) && @form.save
+        format.html { redirect_to respuesta_path, notice: 'success' }
         #format.json { render :show, status: :created, location: @catedra }
       else
-        format.html { redirect_to respuesta_path, notice: 'Cancelación de su participación.' }
+        format.html { redirect_to respuesta_path, notice: 'fail' }
         #format.json { render json: @form.errors, status: :unprocessable_entity }
       end
     end
