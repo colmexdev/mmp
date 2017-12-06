@@ -41,6 +41,10 @@
 </section>
 <%= render 'inicio/footer' %>
 <script type="text/javascript">
+window.onload = function(){
+	changeSelect();
+}
+
 function changeSelect(){
 	var tel = $("#datos_user_telefono")[0].value;
 	var mail = $("#datos_user_email")[0].value;
