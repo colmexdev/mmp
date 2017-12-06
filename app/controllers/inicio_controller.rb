@@ -12,9 +12,9 @@ class InicioController < ApplicationController
 
   def crear_formulario
     @form = DatosUser.new(form_params)
-    logger.debug @form
+    logger.debug @form.email
     respond_to do |format|
-      if !(form_params[:telefono] == "" || form_params[:email] == "") && @form.save
+      if (@form.email.present? || @form.telefono.present?) && @form.save
         format.html { redirect_to respuesta_path, notice: 'success' }
         #format.json { render :show, status: :created, location: @catedra }
       else
