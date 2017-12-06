@@ -14,7 +14,7 @@ class InicioController < ApplicationController
     @form = DatosUser.new(form_params)
     logger.debug form_params
     respond_to do |format|
-      if !(form_params[:telefono].nil? || form_params[:email].nil?) && @form.save
+      if !(form_params[:telefono] == "" || form_params[:email] == "") && @form.save
         format.html { redirect_to respuesta_path, notice: 'success' }
         #format.json { render :show, status: :created, location: @catedra }
       else

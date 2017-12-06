@@ -12,6 +12,7 @@ class InicioController < ApplicationController
 
   def crear_formulario
     @form = DatosUser.new(form_params)
+    logger.debug form_params
     respond_to do |format|
       if !(form_params[:telefono].nil? || form_params[:email].nil?) && @form.save
         format.html { redirect_to respuesta_path, notice: 'success' }
