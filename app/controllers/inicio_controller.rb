@@ -12,8 +12,8 @@ class InicioController < ApplicationController
 
   def crear_formulario
     @form = DatosUser.new(form_params)
-    logger.debug @form.email.blank?
-    logger.debug @form.telefono.blank?
+    logger.debug @form.email.present?
+    logger.debug @form.telefono.present?
     respond_to do |format|
       if !(@form.email.blank? && @form.telefono.blank?) && @form.save
         format.html { redirect_to respuesta_path, notice: 'success' }
