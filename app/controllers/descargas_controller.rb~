@@ -18,18 +18,18 @@ class DescargasController < ApplicationController
   end
 
   def a_csv
-    headers = %w{"Nombre","Correo","Teléfono","Medio","Localidad", "Fecha de ingreso"}
+    headers = %w{"Nombre","Correo","Teléfono","Medio","Localidad", "Comentarios", "Fecha de ingreso"}
     (CSV.generate(headers: true) do |csv|
       csv << headers
       DatosUser.where("localidad = ?",@loc).each do |usr|
-        csv << [usr.nombre,usr.email,usr.telefono,usr.pref,usr.localidad, usr.created_at]
+        csv << [usr.nombre,usr.email,usr.telefono,usr.pref,usr.localidad, usr.comentarios, usr.created_at]
       end
     end).encode("iso-8859-1")
   end
  
   def tabla_pdf
     @datos = DatosUser.where("localidad = ?",@loc)
-    Tabla.new(qdatos)
+    Tabla.new(@datos)
   end
  
   def send_tabla_pdf
