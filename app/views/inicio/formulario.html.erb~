@@ -67,6 +67,6 @@ function changeSelect(){
 		email.text = "Correo electrónico";
 		select.add(email);
 	}
-	select.selectedIndex = 0;
+	select.selectedIndex = (select.options.length > 1 ? 1 : 0);
 }
 </script>

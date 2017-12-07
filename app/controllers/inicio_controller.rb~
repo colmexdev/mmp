@@ -15,7 +15,7 @@ class InicioController < ApplicationController
     logger.debug form_params[:email]
     logger.debug form_params[:telefono]
     respond_to do |format|
-      if (form_params[:email].empty? || form_params[:telefono.empty])
+      if (!form_params[:email].empty? || !form_params[:telefono].empty?)
         @form.save
         format.html { redirect_to respuesta_path, notice: 'success' }
         #format.json { render :show, status: :created, location: @catedra }
