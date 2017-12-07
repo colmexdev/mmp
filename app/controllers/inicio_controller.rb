@@ -15,7 +15,8 @@ class InicioController < ApplicationController
     logger.debug @form.email.present?
     logger.debug @form.telefono.present?
     respond_to do |format|
-      if !(@form.email.blank? && @form.telefono.blank?) && @form.save
+      if (@form.email.present? || @form.telefono.present?)
+        @form.save
         format.html { redirect_to respuesta_path, notice: 'success' }
         #format.json { render :show, status: :created, location: @catedra }
       else
