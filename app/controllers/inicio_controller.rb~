@@ -61,6 +61,6 @@ class InicioController < ApplicationController
   end
 
   def form_params
-    params.require(:datos_user).permit(:nombre, :email, :telefono, :pref, :localidad)
+    params.require(:datos_user).permit(:nombre, :email, :telefono, :pref, :localidad, :comentarios)
   end
 end

@@ -28,8 +28,8 @@ class DescargasController < ApplicationController
   end
  
   def tabla_pdf
-    datos = DatosUser.where("localidad = ?",@loc)
-    Tabla.new(datos)
+    @datos = DatosUser.where("localidad = ?",@loc)
+    Tabla.new(@datos)
   end
  
   def send_tabla_pdf
