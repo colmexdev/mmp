@@ -18,7 +18,7 @@ class DescargasController < ApplicationController
   end
 
   def a_csv
-    headers = %w{"Nombre","Correo","Teléfono","Medio","Localidad", "Comentarios", "Fecha de ingreso"}
+    headers = %w{"Nombre","Correo","Teléfono","Medio","Localidad", "Comentarios", "Registrado"}
     (CSV.generate(headers: true) do |csv|
       csv << headers
       DatosUser.where("localidad = ?",@loc).each do |usr|
