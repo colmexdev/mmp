@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	width: 150px;
 	height: 51px;
-	background-image: url(../images/title-top.png);
+	background-image: image-url('title-top.png');
 	background-repeat: no-repeat;
 }
 .bottom-line {
@@ -446,7 +446,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 }
 .home {
-	background-image: image-url('portada.png');
+	background-image: image-url('portada.jpg');
 	background-position: top center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -471,7 +471,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'PT Sans', sans-serif;
 	;
 	color: #fff;
-	font-size: 100px;
+	font-size: 80px;
 	line-height: 110px;
 	font-weight: 400;
 	margin-bottom: 15px;
@@ -971,6 +971,12 @@ ul.styled-list.list-star li:before {
 .tetela {
 	background-image: image-url('tetela.png');
 }
+.peto {
+	background-image: image-url('peto.png');
+}
+.sta-helena {
+	background-image: image-url('sta-helena.png');
+}
 .c2a {
 	max-width: 700px;
 	margin: 0 auto;
@@ -978,7 +984,7 @@ ul.styled-list.list-star li:before {
 	color: #fff !important;
 }
 .c2a h2 {
-	color: #fff;
+	color: #4c4c4c;
 	font-size: 35px;
 	font-weight: 400;
 	text-transform: uppercase;

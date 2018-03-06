@@ -446,14 +446,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 }
 .home {
-	background-image: image-url('portada.png');
+	background-image: url(../images/portada.jpg);
 	background-position: top center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-color: #000;
 	padding: 100px 0;
-	height: 750px;
 	position: relative/* Temp CSS */
   /* Temp CSS End */
 }
@@ -472,7 +471,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: 'PT Sans', sans-serif;
 	;
 	color: #fff;
-	font-size: 100px;
+	font-size: 80px;
 	line-height: 110px;
 	font-weight: 400;
 	margin-bottom: 15px;
@@ -958,19 +957,19 @@ ul.styled-list.list-star li:before {
 	background-color: #000;
 }
 .ixtlilco {
-	background-image: image-url('ixtlilco.png');
+	background-image: url(../images/ixtlilco.png);
 }
 .marcelino {
-	background-image: image-url('marcelino.png');
+	background-image: url(../images/marcelino.png);
 }
 .jantetelco {
-	background-image: image-url('jantetelco.png');
+	background-image: url(../images/jantetelco.png);
 }
 .san-gabriel {
-	background-image: image-url('san-gabriel.png');
+	background-image: url(../images/san-gabriel.png);
 }
 .tetela {
-	background-image: image-url('tetela.png');
+	background-image: url(../images/tetela.png);
 }
 .c2a {
 	max-width: 700px;
@@ -979,7 +978,7 @@ ul.styled-list.list-star li:before {
 	color: #fff !important;
 }
 .c2a h2 {
-	color: #fff;
+	color: #4c4c4c;
 	font-size: 35px;
 	font-weight: 400;
 	text-transform: uppercase;
