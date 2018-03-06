@@ -1,4 +1,36 @@
 <%= render 'inicio/header' %>
+
+<section class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="section-title st-center c2a">
+        <h2><%= "Datos recabados" %></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <h2 class="post-title">Ingrese los siguientes datos:</h2>
+        <!-- Inicia Log in -->
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <%= f.text_field :usuario, autofocus: true, placeholder: "Usuario", class: "form-control" %>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña", class: "form-control" %>
+
+
+  <div class="actions">
+    		<%= button_tag(type: 'submit', name: 'commit', value: "Acceder", class: "btn btn-main btn-lg", id: 'send', 'data-loading-text': "<i class='fa fa-spinner fa-spin'></i> Ingresando..." ) do %>Ingresar <i class="fa fa-sign-in"></i>
+		<% end %>
+  </div>
+<% end %>
+        <!-- Termina Log in -->
+        <div id="result-message" role="alert"></div>
+      </div>
+		<div class="col-md-5"> <img src="images/ixtlilco.png" alt="Ixtlilco el grande, Tepalcingo" class="img-responsive"> </div>
+    </div>
+  </div>
+</section>
+
+<% if false %>
 <section class="call-2-acction home" data-stellar-background-ratio="0.4">
   <div class="container">
     <div class="row">
@@ -30,19 +62,12 @@
 		<% end %>
   </div>
 <% end %>
-
-<% if false %>
-        <form class="contact-form">
-          <input type="text" class="form-control" id="fname" name="fname" placeholder="Usuario">
-          <input type="email" class="form-control" id="email" name="email" placeholder="Contraseña">
-          <button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Ingresando...">Ingresar <i class="fa fa-sign-in"></i></button>
-        </form>
-<% end %>
         <!-- Termina Log in -->
         <div id="result-message" role="alert"></div>
       </div>
     </div>
   </div>
 </section>
+<% end %>
 
 <%= render 'inicio/footer' %>

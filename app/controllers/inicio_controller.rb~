@@ -12,8 +12,6 @@ class InicioController < ApplicationController
 
   def crear_formulario
     @form = DatosUser.new(form_params)
-    logger.debug form_params[:email]
-    logger.debug form_params[:telefono]
     respond_to do |format|
       if (!form_params[:email].empty? || !form_params[:telefono].empty?)
         @form.save
