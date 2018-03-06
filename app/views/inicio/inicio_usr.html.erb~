@@ -1,5 +1,37 @@
 <%= render 'inicio/header' %>
 
+<section class="blog" id="blog">
+  <div class="container">
+	  <div class="row">
+      <div class="section-title st-center c2a">
+        <h2><%= @lugares[current_user.usuario.to_sym][0] %></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <div class="blog-post">
+          <h2 class="post-title">@lugares[current_user.usuario.to_sym][0]</h2>
+          <div class="post-content">
+            <p>@lugares[current_user.usuario.to_sym][1]</p>
+                </div>
+              <!-- Inicia Términos y condiciones -->
+          <h2 class="post-title">Términos y condiciones</h2>
+          <div class="post-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis elit, facilisis vel urna sit amet, dignissim lacinia nunc. Morbi nisl est, imperdiet nec arcu eu, dictum imperdiet ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed bibendum ultrices lacus nec varius.</p>
+            <p>Vestibulum sagittis risus vel lectus faucibus molestie. Phasellus pretium turpis urna, sit amet aliquam augue rhoncus non. Curabitur pulvinar tortor sed massa euismod gravida vitae ut magna. Donec dapibus purus sed ultricies congue.</p>
+            <p>Integer euismod ultricies venenatis. In justo purus, egestas ut vehicula eu, mattis maximus elit. Aliquam vulputate eros et erat facilisis vestibulum. Curabitur lobortis nulla neque, non bibendum nisl laoreet vel. Maecenas volutpat, urna a fringilla laoreet, nisi elit egestas elit, at aliquet eros nulla sed magna. </p>
+            <p>Vivamus porta gravida sem, quis cursus turpis. Praesent non commodo ligula, vitae accumsan velit. Cras in leo sed quam mollis placerat non in risus. Vivamus imperdiet quis felis a lobortis. Nunc iaculis arcu nec neque dictum, non vehicula tortor volutpat.</p>
+          </div>
+          <h2 class="post-title text-right">Estoy de acuerdo en participar&nbsp; &nbsp;<%= link_to "No acepto",respuesta_path(flash: {notice: "fail"}), class: "btn btn-lg btn-dark" %> <%= link_to "Acepto",formulario_path, class: "btn btn-main btn-lg" %></h2>
+          <!-- Termina Términos y condiciones --> 
+        </div>
+      </div>
+		<div class="col-md-5"> <img src="images/san-gabriel.png" alt="San Gabriel amacuitlapiclo, Jonacatepec" class="img-responsive"> </div>
+    </div>
+  </div>
+</section>
+
+<% if false %>
 <section class="call-2-acction <%= @class %>" data-stellar-background-ratio="0.4">
   <div class="container">
     <div class="row">
@@ -38,7 +70,7 @@
     </div>
   </div>
 </section>
-
+<% end %>
 
 
 <%= render 'inicio/footer' %>

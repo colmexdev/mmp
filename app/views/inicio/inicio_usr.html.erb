@@ -10,9 +10,9 @@
     <div class="row">
       <div class="col-md-7">
         <div class="blog-post">
-          <h2 class="post-title">@lugares[current_user.usuario.to_sym][0]</h2>
+          <h2 class="post-title"><%= @lugares[current_user.usuario.to_sym][0] %></h2>
           <div class="post-content">
-            <p>@lugares[current_user.usuario.to_sym][1]</p>
+            <p><%= @lugares[current_user.usuario.to_sym][1] %></p>
                 </div>
               <!-- Inicia Términos y condiciones -->
           <h2 class="post-title">Términos y condiciones</h2>
@@ -26,7 +26,7 @@
           <!-- Termina Términos y condiciones --> 
         </div>
       </div>
-		<div class="col-md-5"> <img src="images/san-gabriel.png" alt="San Gabriel amacuitlapiclo, Jonacatepec" class="img-responsive"> </div>
+		<div class="col-md-5"> <img src="<%= image_url(@class + '.png') %>" alt="<%= @lugares[current_user.usuario.to_sym][0] %>" class="img-responsive"> </div>
     </div>
   </div>
 </section>
