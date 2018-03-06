@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	width: 150px;
 	height: 51px;
-	background-image: url(../images/title-top.png);
+	background-image: image-url('title-top.png');
 	background-repeat: no-repeat;
 }
 .bottom-line {
@@ -446,7 +446,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 }
 .home {
-	background-image: url(../images/portada.jpg);
+	background-image: image-url('portada.jpg');
 	background-position: top center;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -957,19 +957,25 @@ ul.styled-list.list-star li:before {
 	background-color: #000;
 }
 .ixtlilco {
-	background-image: url(../images/ixtlilco.png);
+	background-image: image-url('ixtlilco.png');
 }
 .marcelino {
-	background-image: url(../images/marcelino.png);
+	background-image: image-url('marcelino.png');
 }
 .jantetelco {
-	background-image: url(../images/jantetelco.png);
+	background-image: image-url('jantetelco.png');
 }
 .san-gabriel {
-	background-image: url(../images/san-gabriel.png);
+	background-image: image-url('san-gabriel.png');
 }
 .tetela {
-	background-image: url(../images/tetela.png);
+	background-image: image-url('tetela.png');
+}
+.peto {
+	background-image: image-url('peto.png');
+}
+.sta-helena {
+	background-image: image-url('sta-helena.png');
 }
 .c2a {
 	max-width: 700px;
