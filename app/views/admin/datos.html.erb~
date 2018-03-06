@@ -41,6 +41,8 @@ Cerrar sesión <i class="fa fa-sign-out"></i>
               <th>Correo electrónico</th>
               <th>Número de teléfono móvil</th>
               <th>Medio</th>
+							<th>Comentarios</th>
+							<th>Fecha de registro</th>
             </tr>
           </thead>
           <tbody>
@@ -50,6 +52,8 @@ Cerrar sesión <i class="fa fa-sign-out"></i>
               <td><%= d.email %></td>
               <td><%= d.telefono %></td>
               <td><%= d.pref %></td>
+              <td><%= d.comentarios %></td>
+							<td><%= d.updated_at %></td>
             </tr>
 						<% end %>
           </tbody>

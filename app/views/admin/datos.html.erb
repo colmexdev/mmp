@@ -1,20 +1,12 @@
 <% render 'inicio/header' %>
-<!-- Inicia banner -->
-<section class="call-2-acction <%= @class %>" data-stellar-background-ratio="0.4">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="c2a"> <br>
-          <h2><%= @loc %></h2>
-          <p>&nbsp;</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Termina banner -->
+
 <section class="blog" id="blog">
   <div class="container">
+	  <div class="row">
+      <div class="section-title st-center c2a">
+        <h2><%= @loc %></h2>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-10">
         <div class="blog-post" style="margin-bottom: 0">
@@ -25,7 +17,6 @@
             <p><%= link_to destroy_admin_session_path, method: "DELETE", class: "btn btn-main btn-lg" do %>
 Cerrar sesión <i class="fa fa-sign-out"></i>
 <% end %>
-
 </p>
           </div>
         </div>
@@ -63,4 +54,70 @@ Cerrar sesión <i class="fa fa-sign-out"></i>
     </div>
   </div>
 </section>
+
+<% if false %>
+<!-- Inicia banner -->
+<section class="call-2-acction <%= @class %>" data-stellar-background-ratio="0.4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="c2a"> <br>
+          <h2><%= @loc %></h2>
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Termina banner -->
+<section class="blog" id="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="blog-post" style="margin-bottom: 0">
+          <h2 class="post-title">Datos recopilados</h2>
+          <div class="post-content">
+            <p><a href="<%= descarga_pdf_path(@datos,format: :pdf) %>" class="btn btn-link">Descargar datos (PDF)</a></p>
+            <p><a href="<%= descarga_pdf_path(@datos,format: :csv) %>" class="btn btn-link">Descargar datos (csv)</a></p>
+            <p><%= link_to destroy_admin_session_path, method: "DELETE", class: "btn btn-main btn-lg" do %>
+Cerrar sesión <i class="fa fa-sign-out"></i>
+<% end %>
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12"> 
+        <!-- Inicia tabla -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre completo</th>
+              <th>Correo electrónico</th>
+              <th>Número de teléfono móvil</th>
+              <th>Medio</th>
+							<th>Comentarios</th>
+							<th>Fecha de registro</th>
+            </tr>
+          </thead>
+          <tbody>
+						<% @datos.each do |d| %>
+            <tr>
+              <td><%= d.nombre %></td>
+              <td><%= d.email %></td>
+              <td><%= d.telefono %></td>
+              <td><%= d.pref %></td>
+              <td><%= d.comentarios %></td>
+							<td><%= d.updated_at %></td>
+            </tr>
+						<% end %>
+          </tbody>
+        </table>
+        <!-- Termina tabla --> 
+      </div>
+    </div>
+  </div>
+</section>
+<% end %>
 <%= render 'inicio/footer' %>
