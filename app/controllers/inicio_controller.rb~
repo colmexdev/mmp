@@ -42,8 +42,8 @@ class InicioController < ApplicationController
 			jonacatepec: ["San Gabriel Amacuitlapilco, Jonacatepec","En SG se destaca el uso del perifoneo para matener a la comunidad en comunicación, su plaza generalemente estaba sola con respecto a las otras comunidades. Hay dos iglesias de las cuales de una resalta el color morado."], 
 			tetela: ["Tetela del volcán","En Tetela los fines de semana las personas se juntan atrás de la escuela e intercambian sus productos, además de vender el típico \"pan de sal\". La vista del volcán Popocatépetl es hermosa y se puede notar entre los lugareños el orgullo de ser nativo del lugar; se distingue por su urbanización ya que es la única localidad con torres. El ex convento, forma parte de una ruta de conventos ubicados en las faldas del volcán."],
 			peto: ["Peto","Lorem ipsum dolor sit amet"],
-			santaelena: ["Santa Helena", "Lorem ipsum dolor sit amet"],
-			santahelena: ["Santa Helena", "Lorem ipsum dolor sit amet"]}
+			santaelena: ["Santa Elena", "Lorem ipsum dolor sit amet"],
+			santahelena: ["Santa Elena", "Lorem ipsum dolor sit amet"]}
     respond_to do |format|
       format.html
     end
