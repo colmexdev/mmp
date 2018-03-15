@@ -1,5 +1,5 @@
-
 <%= render 'inicio/header' %>
+
 <!-- Inicia banner -->
 <section class="home" data-stellar-background-ratio="0.4">
   <div class="container">
@@ -27,8 +27,8 @@
           <h2 class="post-title">Proyecto sobre Migración Mexicana</h2>
           <div class="post-content">
             <p>El Proyecto Sobre Migración Mexicana (MMP) fue creado en 1982 por un grupo interdisciplinario de inverstigadores de México y los Estados Unidos, con el fin de agrandar y mejorar nuestros conocimientos sobre el proceso de migración mexicana hacia los Estados Unidos. El estudio se encuentra bajo la dirección conjunta del antropólogo Jorge Durand quien es investigador del Centro de Estudios sobre Movimientos Sociales de la Universidad de Guadalajara, y del sociólogo Douglas S. Massey, investigador de la Oficina de Investigación de Población de la Universidad de Princeton.</p>
-            <p>Desde su concepción, el MMP se ha enfocado a la tarea de recabar información social, económica y demográfica sobre el proceso migratorio entre México y los Estados Unidos. La información recabada está siendo compilada en una extensa base de datos cuyo uso se encuentra abierto al público a través de este sitio de internet.</p>
-            <p>Los datos del MMP permiten a los investigadores estudiar patrones y procesos de la migración contemporanea México-EE.UU. El proyecto es un esfuerzo multidisciplinario que genera datos publicos sobre las características y comportamiento de migrantes mexicanos.</p>
+            <p>Desde sus inicios, el MMP se ha enfocado a la tarea de recabar información sobre las características socioeconómicas, demográficas, y migratorias entre México y los Estados Unidos de las familias que residen en las comunidad mexicanas. El proyecto es un esfuerzo multidisciplinario el cual genera datos públicos sobre las características y comportamientos de migrantes mexicanos y el cual permite a los investigadores estudiar patrones y procesos de la migración contemporánea México y EE.UU.  El uso de los datos es académico y se respeta el anonimato de los informantes.</p>
+            <p>Los datos del MMP permiten a los investigadores estudiar patrones y procesos de la migración contemporanea México-EE.UU. El proyecto es un esfuerzo multidisciplinario que genera datos públicos sobre las características y comportamiento de migrantes mexicanos.</p>
             <p><a href="http://mmp.opr.princeton.edu/home-es.aspx" target="_blank" class="btn btn-main btn-group-sm">Más información</a></p>
             <h2 class="post-title">Objetivos del MMP</h2>
             <div class="post-content">
@@ -74,37 +74,27 @@
       <!-- Inicia participa -->
       <div class="col-md-4">
         <h2 class="post-title" id="participa" style="margin-top: 0">¡PARTICIPA!</h2>
+				<% if false %>
         <div class="post-content">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et felis massa. Nunc aliquam accumsan tellus, id efficitur tellus iaculis vitae.</p>
         </div>
-        <p><strong>Ingrese la contraseña que le proporcionó el entrevistador:</strong></p>
+				<% end %>
+        <p><strong>Ingrese la contraseña que se encuentra en la tarjeta que le proporcionó el entrevistador.</strong></p>
         <div class="widget contact" style="padding: 0">
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-
-    <%= f.text_field :usuario, autofocus: true, placeholder: "Usuario", class: "form-control" %>
-  </div>
-
-  <div class="field">
-
-    <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña", class: "form-control" %>
-  </div>
-
-  <div class="actions">
-		<%= button_tag(type: 'submit', name: 'commit', value: "Acceder", class: "btn btn-main btn-lg", id: 'send', 'data-loading-text': "<i class='fa fa-spinner fa-spin'></i> Ingresando..." ) do %>Ingresar <i class="fa fa-arrow-circle-o-right"></i>
-		<% end %>
-   
-  </div>
-<% end %>
-
-          <div id="result-message" role="alert">  </div>
+          <form class="contact-form">
+            <input type="text" class="form-control" id="fname" name="fname" placeholder="Comunidad">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Contraseña">
+            <br>
+            <button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Ingresando...">Ingresar <i class="fa fa-arrow-circle-o-right"></i></button>
+          </form>
+          <div id="result-message" role="alert"></div>
         </div>
       </div>
       <!-- Termina participa --> 
     </div>
   </div>
 </section>
+
 <!-- Inicia pie -->
 <%= render 'inicio/footer' %>
 <!-- Termina pie --> 

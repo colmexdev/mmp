@@ -98,6 +98,7 @@
   </div>
 <% end %>
 
+          <div id="result-message" role="alert">  </div>
         </div>
       </div>
       <!-- Termina participa --> 
