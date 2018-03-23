@@ -81,12 +81,23 @@
 				<% end %>
         <p><strong>Ingrese la contraseña que se encuentra en la tarjeta que le proporcionó el entrevistador.</strong></p>
         <div class="widget contact" style="padding: 0">
-          <form class="contact-form">
-            <input type="text" class="form-control" id="fname" name="fname" placeholder="Comunidad">
-            <input type="email" class="form-control" id="email" name="email" placeholder="Contraseña">
-            <br>
-            <button class="btn btn-main btn-lg" type="submit" id="send" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Ingresando...">Ingresar <i class="fa fa-arrow-circle-o-right"></i></button>
-          </form>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+
+    <%= f.text_field :usuario, autofocus: true, placeholder: "Usuario", class: "form-control" %>
+  </div>
+
+  <div class="field">
+
+    <%= f.password_field :password, autocomplete: "off", placeholder: "Contraseña", class: "form-control" %>
+  </div>
+
+  <div class="actions">
+		<%= button_tag(type: 'submit', name: 'commit', value: "Acceder", class: "btn btn-main btn-lg", id: 'send', 'data-loading-text': "<i class='fa fa-spinner fa-spin'></i> Ingresando..." ) do %>Ingresar <i class="fa fa-arrow-circle-o-right"></i>
+		<% end %>
+   
+  </div>
+<% end %>
           <div id="result-message" role="alert"></div>
         </div>
       </div>
