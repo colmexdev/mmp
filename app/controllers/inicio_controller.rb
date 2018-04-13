@@ -46,7 +46,7 @@ class InicioController < ApplicationController
   protected
 
   def set_localidad
-    locs = {ixtlilco: "Ixtlilco el grande", jantetelco: "Jantetelco", marcelinorodriguez: "Marcelino Rodiguez", sangabriel: "San Gabriel", tetela: "Tetela", peto: "Peto", santaelena: "Santa Elena", purisima: "Pusrísima", lagunita: "La Lagunita"}
+    locs = {ixtlilco: "Ixtlilco el grande", jantetelco: "Jantetelco", marcelinorodriguez: "Marcelino Rodiguez", sangabriel: "San Gabriel", tetela: "Tetela", peto: "Peto", santaelena: "Santa Elena", purisima: "Purísima", lagunita: "La Lagunita"}
     @loc = locs[current_user.usuario.to_sym]
   end
 

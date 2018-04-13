@@ -9,12 +9,12 @@ class AdminController < ApplicationController
 
   protected
   def set_loc
-    locs = {adminixtlilco: "Ixtlilco el grande, Tepalcingo", adminjantetelco: "Jantetelco, Jantetelco", adminaxochiapan: "Marcelino Rodiguez, Axochiapán", adminsangabriel: "San Gabriel Amacuitlapilco, Jonacatepec", admintetela: "Tetela del volcán", adminpeto: "Peto", adminsantaelena: "Santa Elena"}
+    locs = {adminixtlilco: "Ixtlilco el grande", adminjantetelco: "Jantetelco", adminmarcelino: "Marcelino Rodiguez", adminsangabriel: "San Gabriel", admintetela: "Tetela", adminpeto: "Peto", adminsantaelena: "Santa Elena", adminpurisima: "Purísima", adminlagunita: "La Lagunita"}
     @loc = locs[current_admin.usuario.to_sym]
   end
 
   def set_adm_class
-    h_class = {adminixtlilco: "ixtlilco", adminjantetelco: "jantetelco", adminaxochiapan: "marcelino", adminsangabriel: "san-gabriel", admintetela: "tetela", adminpeto: "peto", adminsantaelena: "sta-elena"}
+    h_class = {adminixtlilco: "ixtlilco", adminjantetelco: "jantetelco", adminmarcelino: "marcelino", adminsangabriel: "san-gabriel", admintetela: "tetela", adminpeto: "peto", adminsantaelena: "sta-elena", adminpurisima: "Purísima", adminlagunita: "lagunita"}
     @class = h_class[current_admin.usuario.to_sym]
   end
 end
