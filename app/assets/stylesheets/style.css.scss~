@@ -974,8 +974,8 @@ ul.styled-list.list-star li:before {
 .peto {
 	background-image: image-url('peto.png');
 }
-.sta-helena {
-	background-image: image-url('sta-helena.png');
+.sta-elena {
+	background-image: image-url('sta-elena.png');
 }
 .c2a {
 	max-width: 700px;
