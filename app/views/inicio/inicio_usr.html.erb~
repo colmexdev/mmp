@@ -12,7 +12,7 @@
         <div class="blog-post">
           <h2 class="post-title"><%= @lugares[current_user.usuario.to_sym][0] %></h2>
           <div class="post-content">
-            <p><%= @lugares[current_user.usuario.to_sym][1] %></p>
+            <p><%= simpl_format(@lugares[current_user.usuario.to_sym][1]) %></p>
                 </div>
               <!-- Inicia Términos y condiciones -->
           <h2 class="post-title">Términos y condiciones</h2>
