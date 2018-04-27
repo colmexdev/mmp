@@ -17,10 +17,8 @@
               <!-- Inicia Términos y condiciones -->
           <h2 class="post-title">Términos y condiciones</h2>
           <div class="post-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis elit, facilisis vel urna sit amet, dignissim lacinia nunc. Morbi nisl est, imperdiet nec arcu eu, dictum imperdiet ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed bibendum ultrices lacus nec varius.</p>
-            <p>Vestibulum sagittis risus vel lectus faucibus molestie. Phasellus pretium turpis urna, sit amet aliquam augue rhoncus non. Curabitur pulvinar tortor sed massa euismod gravida vitae ut magna. Donec dapibus purus sed ultricies congue.</p>
-            <p>Integer euismod ultricies venenatis. In justo purus, egestas ut vehicula eu, mattis maximus elit. Aliquam vulputate eros et erat facilisis vestibulum. Curabitur lobortis nulla neque, non bibendum nisl laoreet vel. Maecenas volutpat, urna a fringilla laoreet, nisi elit egestas elit, at aliquet eros nulla sed magna. </p>
-            <p>Vivamus porta gravida sem, quis cursus turpis. Praesent non commodo ligula, vitae accumsan velit. Cras in leo sed quam mollis placerat non in risus. Vivamus imperdiet quis felis a lobortis. Nunc iaculis arcu nec neque dictum, non vehicula tortor volutpat.</p>
+            <p>Su participación en una entrevista del Proyecto sobre Migración Mexicana es totalmente voluntaria. El proyecto pretende entender las diversas experiencias de migrantes a los Estados Unidos y sus familias. No importa si la experiencia migratoria fue con o sin papeles. Toda la información que usted brinde será anónima y de carácter estrictamente confidencial. Después de haber sido contactado por un entrevistador, su nombre e información de contacto serán borrados.</p>
+            <p>Después de la entrevista su nombre y otros datos de identificación personales no van a ser incluidos; ninguna persona ni institución podrá identificar sus respuestas. Todas sus respuestas serán utilizadas únicamente para fines académicos. Ninguna agencia o institución del gobierno tendrá acceso a ellas. Usted tiene el derecho de terminar la entrevista en cualquier momento o de no contestar cualquiera de las preguntas.</p>
           </div>
           <h2 class="post-title text-right">Estoy de acuerdo en participar&nbsp; &nbsp;<%= link_to "No acepto",respuesta_path(flash: {notice: "fail"}), class: "btn btn-lg btn-dark" %> <%= link_to "Acepto",formulario_path, class: "btn btn-main btn-lg" %></h2>
           <!-- Termina Términos y condiciones --> 
@@ -30,47 +28,5 @@
     </div>
   </div>
 </section>
-
-<% if false %>
-<section class="call-2-acction <%= @class %>" data-stellar-background-ratio="0.4">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="c2a">
-         <br>
-          <h2><%= @lugares[current_user.usuario.to_sym][0] %></h2>
-			<p>&nbsp;</p>
-          </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Termina banner -->
-<section class="blog" id="blog">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10">
-        <div class="blog-post">
-          <h2 class="post-title"><%= @lugares[current_user.usuario.to_sym][0] %>.</h2>
-          <div class="post-content">
-            <p><%= @lugares[current_user.usuario.to_sym][1] %></p>
-                </div>
-              <!-- Inicia Términos y condiciones -->
-          <h2 class="post-title">Términos y condiciones</h2>
-          <div class="post-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis elit, facilisis vel urna sit amet, dignissim lacinia nunc. Morbi nisl est, imperdiet nec arcu eu, dictum imperdiet ipsum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed bibendum ultrices lacus nec varius.</p>
-            <p>Vestibulum sagittis risus vel lectus faucibus molestie. Phasellus pretium turpis urna, sit amet aliquam augue rhoncus non. Curabitur pulvinar tortor sed massa euismod gravida vitae ut magna. Donec dapibus purus sed ultricies congue.</p>
-            <p>Integer euismod ultricies venenatis. In justo purus, egestas ut vehicula eu, mattis maximus elit. Aliquam vulputate eros et erat facilisis vestibulum. Curabitur lobortis nulla neque, non bibendum nisl laoreet vel. Maecenas volutpat, urna a fringilla laoreet, nisi elit egestas elit, at aliquet eros nulla sed magna. </p>
-            <p>Vivamus porta gravida sem, quis cursus turpis. Praesent non commodo ligula, vitae accumsan velit. Cras in leo sed quam mollis placerat non in risus. Vivamus imperdiet quis felis a lobortis. Nunc iaculis arcu nec neque dictum, non vehicula tortor volutpat.</p>
-          </div>
-          <h2 class="post-title text-right">Estoy de acuerdo en participar&nbsp; &nbsp;<%= link_to "No acepto",respuesta_path(flash: {notice: "fail"}), class: "btn btn-lg btn-dark" %> <%= link_to "Acepto",formulario_path, class: "btn btn-main btn-lg" %></h2>
-          <!-- Termina Términos y condiciones --> 
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<% end %>
-
 
 <%= render 'inicio/footer' %>

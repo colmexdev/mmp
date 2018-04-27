@@ -3,9 +3,6 @@ class InicioController < ApplicationController
   before_action :set_localidad, only: [:formulario,:crear_formulario,:respuesta]
   before_action :set_class, only: [:inicio_usr,:formulario,:crear_formulario,:respuesta]
 
-  def inicio
-  end
-
   def formulario
     @form = DatosUser.new
   end

@@ -51,7 +51,7 @@ class InicioController < ApplicationController
   end
 
   def set_class
-    h_class = {ixtlilco: "ixtlilco", jantetelco: "jantetelco", marcelinorodriguez: "marcelino", sangabriel: "san-gabriel", tetela: "tetela", peto: "peto", santaelena: "sta-elena", purisima: "purisima", lagunita: "Lagunita"}
+    h_class = {ixtlilco: "ixtlilco", jantetelco: "jantetelco", marcelinorodriguez: "marcelino", sangabriel: "san-gabriel", tetela: "tetela", peto: "peto", santaelena: "sta-elena", purisima: "purisima", lagunita: "lagunita"}
     @class = h_class[current_user.usuario.to_sym]
   end
 
